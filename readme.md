@@ -1,2 +1,2 @@
-Este es simplemente un analisis probabilistico del juego de cartas el truco. También hice una clasificación cognitivo-conductual de perfiles de jugadores.
-Sientanse libres de usar dicho material para profundizar en el tema. Armar modelos estadisticos o de machine learning y demases..
+Este es simplemente un análisis probabilístico del juego de cartas el truco. También hice una clasificación cognitivo-conductual de perfiles de jugadores.
+Sientanse libres de usar dicho material para profundizar en el tema. Armar modelos estadisticos o de machine learning y demases...
