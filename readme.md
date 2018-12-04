@@ -29,10 +29,12 @@ Ejemplos incluyen:
 ### Conceptos Clave
 
 * Modelado del oponente:
+Dado que no podemos saber qué cartas tiene nuestro oponente es necesario poder modelar el estilo del juego del mismo.
 
 * Equilibrio de Nash:
 
 * Valor esperado:
+El valor esperado es el puntaje que podemos ganar al tomar una acción (Ejemplo: Ganar envido vs Perder envido) multiplicado por la probabilidad de ocurrencia de dicho desenlance.
 
 
 ### Modelado de perfiles de jugadores
