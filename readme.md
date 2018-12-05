@@ -134,7 +134,8 @@ Vamos a rankear las cartas
 | Re Truco        | raise       |
 | Vale cuatro        | raise       |
 | Quiero        | call      |
-| No Quiero        | fold       |
+| No Quiero (Envido)        | pass       |
+| No Quiero (Truco)       | fold       |
 
 
 ### Modelado de perfiles de jugadores
