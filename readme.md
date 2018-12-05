@@ -145,7 +145,21 @@ Vamos a rankear las cartas
 
 **Formula del indice de mentira:**
 
-`(( (bets when mano = 'malas' || 'muy malas')  + (raise when mano = 'malas' || 'muy malas') ) / (bets + raises) ) * 100`
+`IM = (( (bets when mano = 'malas' || 'muy malas')  + (raise when mano = 'malas' || 'muy malas') ) / (bets + raises) ) * 100`
+
+`IM = (0,1)`
+
+| Expresión matematica       | Termino linguistico       | 
+| ------------- |:-------------:|
+| A = 1     				 | Absoluto      |
+| A = (0.80, 1)     				 | Muy alto     |
+| A = (0.60, 0.80)     				 | Alto     |
+| A = (0.40, 0.60)     				 | Medio     |
+| A = (0.20, 0.40)     				 | Bajo     |
+| A = (0, 0.20)     				 | Muy Bajo     |
+| A = (0,1)     				 | Impredecible    |
+
+
 
 **Formula factor de agresión:**
 
@@ -160,11 +174,11 @@ Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunid
 
 | Nombre  | Descripción | Indice de mentira | Expresión Linguistica | Factor de agresión | Expresión Linguistica | Indice de variabilidad | Expresión Linguistica |  Tendencia a cantar con manos |
 | ------------- |:-------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| Creativo  | Cambia sus tácticas con frecuencia, crea nuevas jugadas espontaneamente. | ? | Impredecible | ? | Impredecible |  | Muy Alta | Impredecible |
-| Temerario | Miente con mucha frecuencia, y suele arriesgar muchos puntos teniendo cartas pobres.  |  | Muy alta |  | Muy alto |  | Bajo | Malas |
-| Tradicional | Miente seguido con cartas medias y malas, en alguna ocasión hace un gran aumento de apuestas con cartas malas.  |  | Alto |  | Alto |  | Bajo | Medias o Malas |
-| Pescador | Canta cuando tiene cartas buenas y medias, aunque cada tanto realiza una mentira teniendo cartas malas. |  | Medio |  | Medio |  | Bajo | Buenas o Medias|
-| Conservador | Canta cuando tiene buenas cartas. Suele decir que no quiere cuando tiene cartas malas. |  | Bajo|  | Bajo |  | Bajo | Muy Buenas o Buenas |
+| Creativo  | Cambia sus tácticas con frecuencia, crea nuevas jugadas espontaneamente. | (0,1) | Impredecible | ? | Impredecible |  | Muy Alta | Impredecible |
+| Temerario | Miente con mucha frecuencia, y suele arriesgar muchos puntos teniendo cartas pobres.  | (0.80, 1) | Muy alto |  | Muy alto |  | Bajo | Malas |
+| Tradicional | Miente seguido con cartas medias y malas, en alguna ocasión hace un gran aumento de apuestas con cartas malas.  | (0.60, 0.80) | Alto |  | Alto |  | Bajo | Medias o Malas |
+| Pescador | Canta cuando tiene cartas buenas y medias, aunque cada tanto realiza una mentira teniendo cartas malas. | (0.40, 0.60) | Medio |  | Medio |  | Bajo | Buenas o Medias|
+| Conservador | Canta cuando tiene buenas cartas. Suele decir que no quiere cuando tiene cartas malas. | (0.20, 0.40) | Bajo|  | Bajo |  | Bajo | Muy Buenas o Buenas |
 | Miedoso | Solo canta cuando tiene cartas excelentes. Prácticamente renuncia a todos los aumentos de apuesta. | 0 | Nulo| 0 | Bajo |  | Bajo | Muy Buenas |
 
 
