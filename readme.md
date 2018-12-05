@@ -1,5 +1,8 @@
 # Analisis computacional-cognitivo-conductual del juego de cartas Truco Argentino.
 
+![](http://www.tornquistdistrital.com.ar/wp-content/uploads/2017/09/Trucoo.jpg "") 
+
+
 ¿Podemos crear una IA para el truco?
 
 **Resumen:** El Truco es un juego de cartas Argentino popularmente jugado en el todo el país y el cono sur. 
@@ -74,13 +77,26 @@ Es un puntaje obtenido en base a la posición de las cartas en función del truco 
 
 #### Cartas
 
-| Carta         | Ranking       | P d/ derrotar a otra carta  |
+| Carta         | Ranking       | P d/ derrotar a otra carta  | P d/ obtener carta  |
 | ------------- |:-------------:| -----:|
-|   ![](images/espada/1.jpg "")   | 1 | 1.0 |
-| ![](images/basto/1.jpg "")      | 2     |   0.9 |
-| ![](images/espada/7.jpg "")     | 3      |    0.9 |
-| ![](images/oro/7.jpg "")     | 4      |    0.9 |
-| ![](images/espada/3.jpg "") ![](images/basto/3.jpg "") ![](images/oro/3.jpg "") ![](images/copa/3.jpg "")       | 5      |    0.9 |
+|   ![](images/espada/1.jpg "") 																				  | 1 | 1.0 | 0.025 |
+| ![](images/basto/1.jpg "")     																				 | 2     |   0.93 | 0.025|
+| ![](images/espada/7.jpg "")  																					   | 3      |    0.86 | 0.025 |
+| ![](images/oro/7.jpg "")   																					  | 4      |    0.78 | 0.025 |
+| ![](images/espada/3.jpg "") ![](images/basto/3.jpg "") ![](images/oro/3.jpg "") ![](images/copa/3.jpg "")       | 5      |    0.71 | 0.1 |
+| ![](images/espada/2.jpg "") ![](images/basto/2.jpg "") ![](images/oro/2.jpg "") ![](images/copa/2.jpg "")       | 6      |    0.64 | 0.1 |
+| ![](images/oro/1.jpg "") ![](images/copa/1.jpg "")     														  | 7      |    0.57 | 0.05 |
+| ![](images/espada/12.jpg "") ![](images/basto/12.jpg "") ![](images/oro/12.jpg "") ![](images/copa/12.jpg "")       | 8      |    0.5 | 0.1 |
+| ![](images/espada/11.jpg "") ![](images/basto/11.jpg "") ![](images/oro/11.jpg "") ![](images/copa/11.jpg "")       | 9      |    0.43 | 0.1 |
+| ![](images/espada/10.jpg "") ![](images/basto/10.jpg "") ![](images/oro/10.jpg "") ![](images/copa/10.jpg "")       | 10      |    0.36 | 0.1 |
+|  ![](images/basto/7.jpg "")  ![](images/copa/7.jpg "")       															| 11      |    0.21 | 0.05 |
+| ![](images/espada/6.jpg "") ![](images/basto/6.jpg "") ![](images/oro/6.jpg "") ![](images/copa/6.jpg "")       | 12      |    0.14 | 0.05 |
+| ![](images/espada/5.jpg "") ![](images/basto/5.jpg "") ![](images/oro/5.jpg "") ![](images/copa/5.jpg "")       | 13      |    0.07 | 0.05 |
+| ![](images/espada/4.jpg "") ![](images/basto/4.jpg "") ![](images/oro/4.jpg "") ![](images/copa/4.jpg "")       | 14      |    0 | 0.05 |
+
+
+
+
 
 ### Modelado de perfiles de jugadores
 
