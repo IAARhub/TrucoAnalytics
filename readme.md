@@ -80,7 +80,7 @@ Es un puntaje obtenido en base a la posición de las cartas en función del truco 
 
 Vamos a usar lógica difusa para clasificar nuestras cartas:
 
-| P d/ derrotar a otra carta        |                    | 
+####  P d/ derrotar a otra carta       
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = 1      				 | Más alto mayor      |
@@ -90,14 +90,15 @@ Vamos a usar lógica difusa para clasificar nuestras cartas:
 | A = (0.35, 0.50)      				 | Medio     |
 | A = (0, 0.21)      				 | Bajo     |
 
-| P d/ obtener carta        |                    | 
+
+#### P d/ obtener carta      
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = 0.1      				 | Alta      |
 | A = 0.05      				 | Media     |
 | A = 0.025      				 | Baja    |
 
-Vamos a rankear 
+Vamos a rankear las cartas
 
 | Carta         | Ranking       | P d/ derrotar a otra carta  | P d/ obtener carta  |
 | ------------- |:-------------:|:-----:|:-----:|
