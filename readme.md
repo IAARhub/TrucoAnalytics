@@ -134,6 +134,10 @@ Formula:
 
 **59,280** son la cantidad de combinaciones posibles que tenemos. Es un número muy grande así que vamos a clasificar esas manos con el uso de lógica difusa.
 
+Si consideramos la diferentes combinación en función de si sos mano o pie las posibilidades son:
+
+`59280 * 2 =` **118,560**
+
 Vamos a clasificar la mano por:
 
 * (A) Su valor en el juego del envido.
@@ -143,18 +147,44 @@ Vamos a clasificar la mano por:
 Vamos por su valor en el envido:
 
 E = **Envido**
+m = 'Soy mano'
+p = 'Soy pie'
 
-| Expresión matematica       | Termino linguistico       | 
-| ------------- |:-------------:|
-| E = 33      				 | Máximo     |
-| E = (28, 32)      				 | Muy Alto     |
-| E = (26, 28)      				 | Alto     |
-| E = (20, 24)      				 | Bajo     |
-| E = (0, 7)      				 | Muy Bajo     |
-| E = (0)      				 | Nulo     |
+| Expresión matematica       | Termino linguistico       |  P de ganar       | Termino linguistico       | 
+| ------------- |:-------------:| ------------- |:-------------:|
+| Em = 33      						 | Máximo     | 1.0 | Absoluta |
+| Ep = 33      						 |      | 0.95 | Casi Absoluta |
+| Em = (28, 32)      				 | Muy Alto    | 0.85 | Muy Alta |
+| Ep = (28, 32)      				 |      | 0.80 | |
+| Em = (26, 27)      				 | Alto     | 0.66 | Alta |
+| Ep = (26, 27)      				 |      | 0.64 |  |
+| Em = (20, 25)      				 | Bajo     | 0.50 | Media |
+| Ep = (20, 25)      				 |      | 0.45 | |
+| Em = (1, 7)      					 | Muy Bajo   | 0.19 | Muy baja |
+| Ep = (1, 7)      					 |     | 0.14 | |
 
 
 
+Probabilidad de ganar se calcula en base al total de casos que mi mano puede ganar el envido sobre el total de casos posibles de envido que tenga el oponente
+
+Casos posibles =
+`[33,32,31,30,29,28,27,26,25,24,23,22,21,20,7,6,5,4,3,2,1]`
+
+
+Osea 21 casos posibles. Ejem.: Si tengo 33 pero no soy mano entonces mis probabilidades de ganar son 20/21 = 0.95
+
+Para los que sean intervalos, calculamos para cada caso y luego computamos promedio.
+
+Ejem:
+
+Em = (28, 32)
+Ep = (28, 32)
+
+`P(g)Em = (0.95 + 0.90 + 0.85 + 0.81 + 0.76) / 5 = 0.85 
+P(g)Ep = (0.90 + 0.85 + 0.81 + 0.76 + 0.71) / 5 = 0.80`
+
+
+Vamos por su valor en el truco:
 
 
 
