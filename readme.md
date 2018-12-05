@@ -2,7 +2,7 @@
 
 ![](http://www.tornquistdistrital.com.ar/wp-content/uploads/2017/09/Trucoo.jpg "") 
 
-
+[DESAFIO] **¿Cómo hacer que una computadora juegue mejor que un humano al truco?**
 ¿Podemos crear una IA para el truco?
 
 **Resumen:** El Truco es un juego de cartas Argentino popularmente jugado en el todo el país y el cono sur. 
@@ -179,7 +179,7 @@ Vamos a rankear las cartas
 
 **Formula Indice de variabilidad:**
 
-Coficiente de varianza = Cv
+Coeficiente de varianza = Cv
 
 ` Vi = v/( Cv(Ai) * Cv(Mi) )`
 
