@@ -144,7 +144,7 @@ Vamos a clasificar la mano por:
 * (B) Su valor en el juego del truco.
 
 
-Vamos por su valor en el envido:
+Vamos por su valor en el **envido**:
 
 E = **Envido**
 m = 'Soy mano'
@@ -154,15 +154,14 @@ p = 'Soy pie'
 | ------------- |:-------------:| ------------- |:-------------:|
 | Em = 33      						 | Máximo     | 1.0 | Absoluta |
 | Ep = 33      						 |      | 0.95 | Casi Absoluta |
-| Em = (28, 32)      				 | Muy Alto    | 0.85 | Muy Alta |
-| Ep = (28, 32)      				 |      | 0.80 | |
-| Em = (26, 27)      				 | Alto     | 0.66 | Alta |
-| Ep = (26, 27)      				 |      | 0.64 |  |
-| Em = (20, 25)      				 | Bajo     | 0.50 | Media |
-| Ep = (20, 25)      				 |      | 0.45 | |
-| Em = (1, 7)      					 | Muy Bajo   | 0.19 | Muy baja |
-| Ep = (1, 7)      					 |     | 0.14 | |
-
+| Em = (28, 32)      				 | Muy Alto    | 0.85~ | Muy Alta |
+| Ep = (28, 32)      				 |      | 0.80~ | |
+| Em = (26, 27)      				 | Alto     | 0.66~ | Alta |
+| Ep = (26, 27)      				 |      | 0.64~ |  |
+| Em = (20, 25)      				 | Bajo     | 0.50~ | Media |
+| Ep = (20, 25)      				 |      | 0.45~ | |
+| Em = (1, 7)      					 | Muy Bajo   | 0.19~ | Muy baja |
+| Ep = (1, 7)      					 |     | 0.14~ | |
 
 
 Probabilidad de ganar se calcula en base al total de casos que mi mano puede ganar el envido sobre el total de casos posibles de envido que tenga el oponente
@@ -184,7 +183,29 @@ Ep = (28, 32)
 P(g)Ep = (0.90 + 0.85 + 0.81 + 0.76 + 0.71) / 5 = 0.80`
 
 
-Vamos por su valor en el truco:
+Vamos por su valor en el **truco**:
+
+
+Para el truco vamos darle un puntaje a cada carta de nuestra mano en base a su ranking.
+
+Ejemplo: Si tengo un ancho de espada, es decir ranking 1 son 14 puntos (inversamente proporcional a la cantidad de casos)
+
+| Carta         | Ranking       |  Puntaje  |
+| ------------- |:-------------:|:-----:|
+|   ![](images/espada/1.jpg "") 																				  | 1 | 14 | 
+| ![](images/basto/1.jpg "")     																				 | 2     |   13 | 
+| ![](images/espada/7.jpg "")  																					   | 3      |    12 | 
+| ![](images/oro/7.jpg "")   																					  | 4      |    11 | 
+| ![](images/espada/3.jpg "") ![](images/basto/3.jpg "") ![](images/oro/3.jpg "") ![](images/copa/3.jpg "")       | 5      |    10 | 
+| ![](images/espada/2.jpg "") ![](images/basto/2.jpg "") ![](images/oro/2.jpg "") ![](images/copa/2.jpg "")       | 6      |    9 | 
+| ![](images/oro/1.jpg "") ![](images/copa/1.jpg "")     														  | 7      |    8 |
+| ![](images/espada/12.jpg "") ![](images/basto/12.jpg "") ![](images/oro/12.jpg "") ![](images/copa/12.jpg "")       | 8      |    7 | 
+| ![](images/espada/11.jpg "") ![](images/basto/11.jpg "") ![](images/oro/11.jpg "") ![](images/copa/11.jpg "")       | 9      |    6 | 
+| ![](images/espada/10.jpg "") ![](images/basto/10.jpg "") ![](images/oro/10.jpg "") ![](images/copa/10.jpg "")       | 10      |    5 | 
+|  ![](images/basto/7.jpg "")  ![](images/copa/7.jpg "")       															| 11      |    4 | 
+| ![](images/espada/6.jpg "") ![](images/basto/6.jpg "") ![](images/oro/6.jpg "") ![](images/copa/6.jpg "")       | 12      |    3 | 
+| ![](images/espada/5.jpg "") ![](images/basto/5.jpg "") ![](images/oro/5.jpg "") ![](images/copa/5.jpg "")       | 13      |    2 | 
+| ![](images/espada/4.jpg "") ![](images/basto/4.jpg "") ![](images/oro/4.jpg "") ![](images/copa/4.jpg "")       | 14      |    1 | 
 
 
 
@@ -256,7 +277,6 @@ Coeficiente de varianza = Cv
 
 `Vi = (0,1)`
 
-**¿Cómo medirian la variabilidad de juego? :)**
 
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
