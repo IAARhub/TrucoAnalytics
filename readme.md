@@ -40,81 +40,51 @@ Ejemplos incluyen:
 
 ### Conceptos Clave
 
-* Modelado del oponente:
+* **Modelado del oponente**:
 Dado que no podemos saber qué cartas tiene nuestro oponente es necesario poder modelar el estilo del juego del mismo.
 El modelado del oponente busca clasificar a nuestro oponente en base a su estilo estilo cognitivo (Toma deciciones de manera racional VS toma decisiones de manera intuitiva) así como su comportamiento. ¿Con qué frecuencia el oponente cambia su estilo de juego? 
 ¿Cuál es la frecuencia en la qué miente? ¿Tiene predominancia el comportamiento agresivo (Ejem.: Aumentar apuestas) o el comportamiento defensivo (Ejem.: Rechazar apuestas en contextos de malas cartas).
 
-* Equilibrio de Nash:
+* **Equilibrio de Nash**:
 Se llama equilibrio de Nash a  situaciones en las que las decisiones que ambos jugadores tomaron no pudiesen haber maximizado la utilidad para ambos de otra mejor alternativa.
 
-* Valor esperado:
+* **Valor esperado**:
 El valor esperado (EV) es el puntaje que podemos ganar al tomar una acción (Ejemplo: Ganar envido vs Perder envido) multiplicado por la probabilidad de ocurrencia de dicho desenlance.
 
-* Expectativa positiva:
+* **Expectativa positiva**:
 EV+ , o expectativa positiva, es aquella acción que maxima la utilidad en función de su probabilidad de ocurrencia dados ciertas jugadas en contextos de información incompleta.
 
 * Teorema fundamental del Poker. (Aplica para el Truco)
 El teorema fundamental del poker, propuesto por David Sklansky, afirma que 'Siempre que un jugador juegue de manera distinta a la que lo habría hecho si conociera las cartas del rival, su rival saca ventaja; siempre que un jugador haga el mismo movimiento que haría si conociera las cartas del rival, él saca ventaja.'
 
-* Pozo del juego (Game's Equity)
+* **Pozo del juego (Game's Equity)**:
 El pozo del juego es la cantidad de puntos en juego durante la partida. (Ejem. Si se canta truco y re truco serán 3).
 
-* Pozo del jugador (Player's equity)
+* **Pozo del jugador (Player's equity)**:
 El pozo del jugador es el pozo del juego multiplicado por la probabilidad del jugador de ganar sobre el pozo del juego multiplicado por la probabilidad del jugador de perder.
+
+
+* **Valor de la mano (Hand's value)**:
+Es un puntaje obtenido en base a la posición de las cartas en función del truco y los tantos multiplicado por la probabilidad de obtenerlos.
+
+### Modelado de cartas y manos.
+
+** P = Probabilidad **
+
+
+#### Cartas
+
+| Carta         | Ranking       | P d/ derrotar a otra carta  |
+| ------------- |:-------------:| -----:|
+|   ![](images/espada/1.jpg "")   | 1 | 1.0 |
+| ![](images/basto/1.jpg "")     | 2     |   0.9 |
+| zebra stripes | are neat      |    $1 |
 
 ### Modelado de perfiles de jugadores
 
-Perfiles de Estrategia (Aspecto Conductual)	Descripcion	Frecuencia de Mentira	Tendencia a Cantar con	Tendencia a Aceptar Apuesta	Tendencia a Aumentar apuesta	Eficaz contra	Debil contra
-Creativo	Cambia sus tácticas con frecuencia, crea nuevas jugadas espontaneamente.	Impredecible	Impredecible	Impredecible	Impredecible	Todos	Ninguno
-Temerario	Miente con mucha frecuencia, y suele arriesgar muchos puntos teniendo cartas pobres. 	Muy alta	Cartas malas	Muy alta	Alta	Miedoso	Tradicional
-Tradicional	Miente seguido con cartas medias y malas, en alguna ocasión hace un gran aumento de apuestas con cartas malas.	Alta	Cartas medias / malas	Alta	Media	Temerario	Pescador
-Pescador	Canta cuando tiene cartas buenas y medias, aunque cada tanto realiza una mentira teniendo cartas malas.	Media	Cartas buenas / medias	Media	Media	Tradicional	Conservador
-Conservador	Canta cuando tiene buenas cartas. Suele decir que no quiere cuando tiene cartas malas.	Baja	Cartas excelentes / buenas	Media	Baja	Pescador	Tradicional
-Miedoso	Solo canta cuando tiene cartas excelentes. Prácticamente renuncia a todos los aumentos de apuesta.	Nula	Cartas excelentes	Baja	Muy baja	Ninguno	Todos
-
-
-Perfiles de Estrategia (Aspecto Conductual)	Descripcion	Frecuencia de Mentira	Tendencia a Cantar con	Tendencia a Aceptar Apuesta	Tendencia a Aumentar apuesta	Eficaz contra	Debil contra
-Creativo	Cambia sus tácticas con frecuencia, crea nuevas jugadas espontaneamente.	Impredecible	Impredecible	Impredecible	Impredecible	Todos	Ninguno
-Temerario	Miente con mucha frecuencia, y suele arriesgar muchos puntos teniendo cartas pobres. 	Muy alta	Cartas malas	Muy alta	Alta	Miedoso	Tradicional
-Tradicional	Miente seguido con cartas medias y malas, en alguna ocasión hace un gran aumento de apuestas con cartas malas.	Alta	Cartas medias / malas	Alta	Media	Temerario	Pescador
-Pescador	Canta cuando tiene cartas buenas y medias, aunque cada tanto realiza una mentira teniendo cartas malas.	Media	Cartas buenas / medias	Media	Media	Tradicional	Conservador
-Conservador	Canta cuando tiene buenas cartas. Suele decir que no quiere cuando tiene cartas malas.	Baja	Cartas excelentes / buenas	Media	Baja	Pescador	Tradicional
-Miedoso	Solo canta cuando tiene cartas excelentes. Prácticamente renuncia a todos los aumentos de apuesta.	Nula	Cartas excelentes	Baja	Muy baja	Ninguno	Todos
-
-
-SEGÚN SU EXPERTISE	Nivel de Atención y Concentración	Experiencia
-Experto	Si bien puede no aparentarlo siempre esta muy concentrado y atento en el juego. Tiene una gama muy alta de tácticas. Un nivel de actuación muy alto, sabe mentir. Cambia con frecuencia su repertorio de tácticas y perfiles de estrategia en función del juego.	Varios años
-Experimentado		Varios años
-Medio	Conoce las tácticas y señas, sin embargo a veces se lo ve distraido y desentendido del juego.	Algunos años
-Básico	Esta empezando a entender el juego, empieza a incorporar sus propias tácticas y perfiles de estrategia.	Menos de un año
-Inicial	No entiende ni conoce las tácticas tipicas, no suele indetificar mentiras. Puede estar distraido. No conoce las señas y generalmente precisa ayuda externa.	Primeras 20 partidas
-		
-		
-		
-SEGÚN SU FORMA DE PENSAMIENTO (Aspecto Cognitivo)		
-Convinado		
-Racional		
-Intuitvo		
-
-
-		Ideal cuando	Efectivo cuando	Riesgo			
-Ir a la pesca	Se tiene tanto o truco medio o alto, no se canta y se espera a que el contrincante cante para doblar la apuesta o aceptar.				Se tiene	No se canta	Dobla Apuesta
-Envido de Cobertura	Se tiene buen tanto pero malas cartas para el  truco, el oponente canta truco en la primera mano, y se dice "el envido esta primero" para postergar el truco y obtener puntos del tanto antes de retirarse.						
-Mentira del tanto	No se tienen buen tanto, se canta o se acepta y al momento de decir los puntos se miente por un nro más alto, esperando a que se termine la partida y el rival haya olvidado pedir que se muestren los tantos.	Jugamos con contrincantes muy distraidos	Nuestro oponente se olvido de solicitar que se muestren los tantos al finalizar la partida.				
-Trampa del truco	Se tiene muy buenas cartas de envio y cartas medias/buenas de truco, en la primera mano cantamos truco esperando que nuestro oponente nos diga "el envido esta primero" de manera tal que podamos doblar la apuesta.				Se tiene	Canta truco	Dobla Apuesta
-Achicar	No se tiene buenas cartas (tanto o truco), el oponente canta primero y  dobla la apuesta buscando que el oponente la rechace.				No se tiene	Dobla apuesta	No quiero
-Hacerlos entrar	Se tiene buenas cartas, el contricante canta primero y se dobla la apuesta para buscar  más puntos.				Se tiene	Dobla apuesta	Se quiere
-Señas falsas	El oponente nos mira y hacemos una seña falsa que simulamente va dirigida a nuestro compañero para confundir al rival.						
-Señas personalizadas	Junto a tu compañero se crean nuevas señas que unicamente ustedes conocen de manera tal de confundir al rival.						
-Jugar callado	No se tiene buenas cartas, y no se canta nada esperando que pase desapercibido para el oponente y tampoco lo haga.						
-Hacersela	Apurar a un oponente para que juege cuando no es su turno, de manera que tire y queme su carta.						
-El error	Estar hablando y simular que se te escapó la palabra truco o envido de manera que los oponentes quieran tomar provecho, acepten y/o doblen la apuesta esperando que nosotros no tengamos nada.						
-Falta envido de Cobertura	El oponente esta a pocos puntos de ganar (menos de 3) , vos no tenes muchos tantos, te canta tanto o te dobla una apuesta. Para minimizar riesgos le cantas falta envido para reducir los puntos en juego.				No se tiene	Se canta	Minimiza Apuesta
-Apriete	Nuestro oponente esta a pocos puntos de perder, tenemos cartas y sabiendo que sí o sí debe aceptar, cantamos tanto o truco para acepte y pierda.				Se tiene	Se canta	Se quiere
 
 
 
+## Referencias y Bibliografía adicional
 
-* Indice de agresividad:
-* Indice de variabilidad:
+* David Sklansky (1987). The Theory of Poker. Two Plus Two Publications. ISBN 1-880685-00-0.
