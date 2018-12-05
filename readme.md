@@ -83,12 +83,12 @@ Vamos a usar lógica difusa para clasificar nuestras cartas:
 ####  P d/ derrotar a otra carta       
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
-| A = 1      				 | Más alto mayor      |
-| A = 0.93      				 | Más alto menor      |
-| A = (0.78, 0.86)      				 | Muy alto     |
-| A = (0.57, 0.71)      				 | Alto     |
-| A = (0.35, 0.50)      				 | Medio     |
-| A = (0, 0.21)      				 | Bajo     |
+| A = 1      				 | Absoluta     |
+| A = 0.93      				 | Casi Absoluta      |
+| A = (0.78, 0.86)      				 | Muy alta     |
+| A = (0.57, 0.71)      				 | Alta     |
+| A = (0.35, 0.50)      				 | Media     |
+| A = (0, 0.21)      				 | Baja     |
 
 
 #### P d/ obtener carta      
@@ -124,8 +124,21 @@ Vamos a rankear las cartas
 ### Modelado de perfiles de jugadores
 
 
+### Según su perfil de estrategia
+
+Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunidades que no lo hizo) , (B) Factor de agresión (Oportunidades que aumentó apuesta sobre oportunidades que no lo hizo) y (C) Indice de variabilidad (Frecuencia en la cambia el patrón de estrategia en función del resto)
+
+| Nombre  | Descripción | Indice de mentira | Expresión Linguistica | Factor de agresión | Expresión Linguistica | Indice de variabilidad | Expresión Linguistica |  Tendencia a cantar con manos |
+| ------------- |:-------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Creativo  | Cambia sus tácticas con frecuencia, crea nuevas jugadas espontaneamente. | ? | Impredecible | ? | Impredecible |  | Muy Alta | Impredecible |
+| Temerario | Miente con mucha frecuencia, y suele arriesgar muchos puntos teniendo cartas pobres.  |  | Muy alta |  | Muy alto |  | Bajo | Malas |
+| Tradicional | Miente seguido con cartas medias y malas, en alguna ocasión hace un gran aumento de apuestas con cartas malas.  |  | Alto |  | Alto |  | Bajo | Medias o Malas |
+| Pescador | Canta cuando tiene cartas buenas y medias, aunque cada tanto realiza una mentira teniendo cartas malas. |  | Medio |  | Medio |  | Bajo | Buenas o Medias|
+| Conservador | Canta cuando tiene buenas cartas. Suele decir que no quiere cuando tiene cartas malas. |  | Bajo|  | Bajo |  | Bajo | Muy Buenas o Buenas |
+| Miedoso | Solo canta cuando tiene cartas excelentes. Prácticamente renuncia a todos los aumentos de apuesta. | 0 | Nulo| 0 | Bajo |  | Bajo | Muy Buenas |
 
 
 ## Referencias y Bibliografía adicional
 
 * David Sklansky (1987). The Theory of Poker. Two Plus Two Publications. ISBN 1-880685-00-0.
+* Zadeh, L. A. (1965). Fuzzy sets. Information and control, 8(3), 338-353
