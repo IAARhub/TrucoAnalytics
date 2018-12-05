@@ -119,12 +119,42 @@ Vamos a rankear las cartas
 
 
 
+### Modelado de acciones, jugadas y tácticas:
+
+| Acción         | Denominación       |
+| ------------- |:-------------:|
+| Tirar carta         | check       |
+| Irse al mazo         | fold       |
+| Envido         | bet       |
+| Envido Envido         | bet       |
+| Real envido         | raise       |
+| Envido Real envido         | raise       |
+| Falta envido         | raise && allIn       |
+| Truco        | bet       |
+| Re Truco        | raise       |
+| Vale cuatro        | raise       |
+| Quiero        | call      |
+| No Quiero        | fold       |
 
 
 ### Modelado de perfiles de jugadores
 
 
-### Según su perfil de estrategia
+#### Según su perfil de estrategia
+
+
+**Formula del indice de mentira:**
+
+`(( (bets when mano = 'malas' || 'muy malas')  + (raise when mano = 'malas' || 'muy malas') ) / (bets + raises) ) * 100`
+
+**Formula factor de agresión:**
+
+`(%raises + %bets) / %calls`
+
+
+**Indice de variabilidad:**
+
+``
 
 Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunidades que no lo hizo) , (B) Factor de agresión (Oportunidades que aumentó apuesta sobre oportunidades que no lo hizo) y (C) Indice de variabilidad (Frecuencia en la cambia el patrón de estrategia en función del resto)
 
