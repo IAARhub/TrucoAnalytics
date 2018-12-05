@@ -75,6 +75,9 @@ El pozo del jugador es el pozo del juego multiplicado por la probabilidad del ju
 * **Valor de la mano (Hand's value)**:
 Es un puntaje obtenido en base a la posición de las cartas en función del truco y los tantos multiplicado por la probabilidad de obtenerlos.
 
+* **Combinatoria:**
+Es el estudio de la probabilidad de obtener diferentes manos en particular.
+
 ### Modelado de cartas y manos.
 
 **P = Probabilidad**
@@ -103,7 +106,7 @@ Vamos a usar lógica difusa para clasificar nuestras cartas:
 | A = 0.05      				 | Media     |
 | A = 0.025      				 | Baja    |
 
-Vamos a rankear las cartas
+Vamos a rankear las cartas:
 
 | Carta         | Ranking       | P d/ derrotar a otra carta  | P d/ obtener carta  |
 | ------------- |:-------------:|:-----:|:-----:|
@@ -123,6 +126,39 @@ Vamos a rankear las cartas
 | ![](images/espada/4.jpg "") ![](images/basto/4.jpg "") ![](images/oro/4.jpg "") ![](images/copa/4.jpg "")       | 14      |    0 | 0.05 |
 
 
+#### Combinatoria de manos
+
+Formula: 
+
+`P = 40! / (40 - 3)! =  40! / 37! = 40 * 39 * 38 = 59280`
+
+**59,280** son la cantidad de combinaciones posibles que tenemos. Es un número muy grande así que vamos a clasificar esas manos con el uso de lógica difusa.
+
+Vamos a clasificar la mano por:
+
+* (A) Su valor en el juego del envido.
+* (B) Su valor en el juego del truco.
+
+
+Vamos por su valor en el envido:
+
+E = **Envido**
+
+| Expresión matematica       | Termino linguistico       | 
+| ------------- |:-------------:|
+| E = 33      				 | Máximo     |
+| E = (28, 32)      				 | Muy Alto     |
+| E = (26, 28)      				 | Alto     |
+| E = (20, 24)      				 | Bajo     |
+| E = (0, 7)      				 | Muy Bajo     |
+| E = (0)      				 | Nulo     |
+
+
+
+
+
+
+####  P d/ derrotar a otra carta     	
 
 ### Modelado de acciones, jugadas y tácticas:
 
