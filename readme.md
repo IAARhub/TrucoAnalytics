@@ -11,8 +11,10 @@ En los últimos tiempos, han existido numerosos articulos cientificos implementan
 El próposito de este proyecto es analizar este juego desde un aspecto computacional para poder, luego, modelar un agente de aprendizaje reforzado.
 Para dicho fin, primero vamos a hacer una revisión de los trabajos cientificos en juegos similares (como el poker), luego conceptualizar algunos terminos clave para abordar dicho problema, proponemos en este trabajo un modelado del oponente en función del comportamiento y estilo cognitivo de jugadores de truco y finalmente, invitamos a la comunidad al involucramiento en el desarrollo de un agente de aprendizaje reforzado para resolver este problema. ¿Cuál creen qué es el mejor enfoque para abordar el problema? ¿Qué algoritmo usarias?
 
-Si te interesa participar simplemente clona este repositorio y unite al slack **haciendo clic** a este link: http://iaar-slack.herokuapp.com/
-Si ya estas en slack podes ingresar con este link: http://iaar.slack.com
+## ¿Cómo contribuir?
+
+* Si te interesa participar simplemente clona este repositorio y unite al slack **haciendo clic** a este link: http://iaar-slack.herokuapp.com/
+* Si ya estas en slack podes ingresar con este link: http://iaar.slack.com
 
 ## Facilitador
 
