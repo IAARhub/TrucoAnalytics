@@ -72,10 +72,25 @@ Es un puntaje obtenido en base a la posición de las cartas en función del truco 
 
 ### Modelado de cartas y manos.
 
-** P = Probabilidad **
+**P = Probabilidad**
 
 
 #### Cartas
+
+
+Vamos a usar lógica difusa para clasificar nuestras cartas:
+
+| P d/ derrotar a otra carta        |                    | 
+| ------------- |:-------------:|
+| Expresión matematica       | Termino linguistico       | 
+| A = 1      				 | Más alto mayor      |
+| A = 0.93      				 | Más alto menor      |
+| A = (0.78, 0.86)      				 | Muy alto     |
+| A = (0.57, 0.71)      				 | Alto     |
+| A = (0.35, 0.50)      				 | Medio     |
+| A = (0, 0.21)      				 | Bajo     |
+
+Vamos a rankear 
 
 | Carta         | Ranking       | P d/ derrotar a otra carta  | P d/ obtener carta  |
 | ------------- |:-------------:|:-----:|:-----:|
