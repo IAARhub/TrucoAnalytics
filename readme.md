@@ -77,8 +77,10 @@ Es un puntaje obtenido en base a la posición de las cartas en función del truco 
 | Carta         | Ranking       | P d/ derrotar a otra carta  |
 | ------------- |:-------------:| -----:|
 |   ![](images/espada/1.jpg "")   | 1 | 1.0 |
-| ![](images/basto/1.jpg "")     | 2     |   0.9 |
-| zebra stripes | are neat      |    $1 |
+| ![](images/basto/1.jpg "")      | 2     |   0.9 |
+| ![](images/espada/7.jpg "")     | 3      |    0.9 |
+| ![](images/oro/7.jpg "")     | 4      |    0.9 |
+| ![](images/espada/3.jpg "") ![](images/basto/3.jpg "") ![](images/oro/3.jpg "") ![](images/copa/3.jpg "")       | 5      |    0.9 |
 
 ### Modelado de perfiles de jugadores
 
