@@ -179,6 +179,8 @@ Vamos a rankear las cartas
 
 ``
 
+**¿Cómo medirian la variabilidad de juego? :)**
+
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = 1     				 | Absoluto      |
@@ -203,6 +205,7 @@ Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunid
 
 ## Próximos pasos en el analísis
 
+* Construir un indice para medir variabilidad de juego.
 * Clasificar valor de las manos.
 * Modelar estados del juego
 * Clasificar jugadas (plays)
@@ -217,3 +220,9 @@ Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunid
 
 * David Sklansky (1987). The Theory of Poker. Two Plus Two Publications. ISBN 1-880685-00-0.
 * Zadeh, L. A. (1965). Fuzzy sets. Information and control, 8(3), 338-353
+
+### Más literatura cientifica:
+
+* Billings, D., Schaeffer, J., & Szafron, D. (1999). Using probabilistic knowledge and simulation to play poker. In In AAAI National Conference. http://www.aaai.org/Papers/AAAI/1999/AAAI99-099.pdf
+* Barone, L., & While, L. (2000, July). Adaptive learning for poker. In Proceedings of the 2nd Annual Conference on Genetic and Evolutionary Computation (pp. 566-573). Morgan Kaufmann Publishers Inc.. http://www.cs.bham.ac.uk/~wbl/biblio/gecco2000/RW179.pdf
+* Johansson, U., Sonstrod, C., & Niklasson, L. (2006, December). Explaining Winning Poker--A Data Mining Approach. In Machine Learning and Applications, 2006. ICMLA'06. 5th International Conference on (pp. 129-134). IEEE. https://ieeexplore.ieee.org/abstract/document/4041481/
