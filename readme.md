@@ -78,7 +78,7 @@ Es un puntaje obtenido en base a la posición de las cartas en función del truco 
 #### Cartas
 
 | Carta         | Ranking       | P d/ derrotar a otra carta  | P d/ obtener carta  |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:|:-----:|:-----:|
 |   ![](images/espada/1.jpg "") 																				  | 1 | 1.0 | 0.025 |
 | ![](images/basto/1.jpg "")     																				 | 2     |   0.93 | 0.025|
 | ![](images/espada/7.jpg "")  																					   | 3      |    0.86 | 0.025 |
