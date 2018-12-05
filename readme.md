@@ -145,9 +145,9 @@ Vamos a rankear las cartas
 
 **Formula del indice de mentira:**
 
-`IM = (( (bets when mano = 'malas' || 'muy malas')  + (raise when mano = 'malas' || 'muy malas') ) / (bets + raises) ) * 100`
+`Mi = (( (bets when mano = 'malas' || 'muy malas')  + (raise when mano = 'malas' || 'muy malas') ) / (bets + raises) ) * 100`
 
-`IM = (0,1)`
+`Mi = (0,1)`
 
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
@@ -163,7 +163,8 @@ Vamos a rankear las cartas
 
 **Formula indice de agresión:**
 
-`(bets + raises) / (bets + raises + calls + checks) * 100`
+`Ai = (bets + raises) / (bets + raises + calls + checks) * 100`
+`Mi = (0,1)`
 
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
@@ -175,9 +176,13 @@ Vamos a rankear las cartas
 | A = (0, 0.20)     				 | Muy Bajo     |
 | A = (0,1)     				 | Impredecible    |
 
-**Indice de variabilidad:**
+**Formula Indice de variabilidad:**
 
-``
+Coficiente de varianza = Cv
+
+` Vi = v/( Cv(Ai) * Cv(Mi) )`
+
+`Vi = (0,1)`
 
 **¿Cómo medirian la variabilidad de juego? :)**
 
@@ -205,8 +210,8 @@ Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunid
 
 ## Próximos pasos en el analísis
 
-* Construir un indice para medir variabilidad de juego.
 * Clasificar valor de las manos.
+* Calcular probabilidad de las manos.
 * Modelar estados del juego
 * Clasificar jugadas (plays)
 * Calcular valor esperado de jugadas y acciones segun diferentes estados.
