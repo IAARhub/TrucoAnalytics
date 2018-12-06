@@ -242,6 +242,7 @@ Entonces por ejemplo...
 | ![](images/espada/1.jpg "") ![](images/oro/7.jpg "") ![](images/oro/6.jpg "") de mano   |  2           |        0.0015581    |  21/21       |  28/39            |  1               | 0.92               |  2               | 1.84              |   7  | 3.7 | 10.7 |
 | ![](images/basto/1.jpg "") ![](images/oro/7.jpg "") ![](images/oro/6.jpg "") de mano   |  3           |        0.0015581    |  21/21       |  27/39             |  1               | 0.89               |  2               | 1.78              |   7  | 3.56 | 10.56 |
 | ![](images/espada/7.jpg "") ![](images/oro/7.jpg "") ![](images/oro/6.jpg "") OR ![](images/espada/6.jpg "") de mano   |  4           |        0.0008212    |  21/21       |  26/39             |  1               | 0.87               |  2               | 1.74             |   7  | 3.48 | 10.48 |
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/3.jpg "") de mano   |  ?           |        0.0004220    |  18/21       |  36/39       |  0.86               | 0.95               |  1.72            | 1.90              |   6  | 3.8 | 9.80 |
 | ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.0004220    |  16/21       |  39/39       |  0.76               | 1               |  1.52            | 2               |   5.32  | 4 | 9.32 |
 
 
