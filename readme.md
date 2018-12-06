@@ -6,10 +6,13 @@
 ¿Podemos crear una IA para el truco?
 
 **Resumen:** El Truco es un juego de cartas Argentino popularmente jugado en el todo el país y el cono sur. 
-Es un juego de estrategia competitivo basado en turnos, de estados finitos e información incompleta, lo cúal quiere decir que los jugadores basaran sus estrategias en base a especulaciones en cuanto a las cartas de los demas.
+Es un juego de estrategia competitivo basado en turnos, de suma cero, estados finitos e información incompleta, lo cúal quiere decir que los jugadores basaran sus estrategias en base a especulaciones en cuanto a las cartas de los demas.
 En los últimos tiempos, han existido numerosos articulos cientificos implementando modelos de aprendizaje reforzado en juegos de dichas caracteristicas. No obstante, aun no hay ningun trabajo que haya analizado este particular juego Argentino.
 El próposito de este proyecto es analizar este juego desde un aspecto computacional para poder, luego, modelar un agente de aprendizaje reforzado.
 Para dicho fin, primero vamos a hacer una revisión de los trabajos cientificos en juegos similares (como el poker), luego conceptualizar algunos terminos clave para abordar dicho problema, proponemos en este trabajo un modelado del oponente en función del comportamiento y estilo cognitivo de jugadores de truco y finalmente, invitamos a la comunidad al involucramiento en el desarrollo de un agente de aprendizaje reforzado para resolver este problema. ¿Cuál creen qué es el mejor enfoque para abordar el problema? ¿Qué algoritmo usarias?
+
+
+**Nota:** Estamos analizando el truco Argentino **sin** flor y de **a dos** jugadores.
 
 ## ¿Cómo contribuir?
 
@@ -236,7 +239,10 @@ Entonces por ejemplo...
 | ---------------------------------------------------------------------------------------------|:-------------:|:------------------:|:------------:|:------------:|:-------------------:|:------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|		
 | ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano  |  1           |        0.0015581    |  21/21       |  29/39       |  1               | 0.95               |  2               | 1.95                |   7  | 3.8 | 10.8 |
 | ![](images/basto/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  2           |        0.0015581    |  21/21       |  28/39       |  1               | 0.92               |  2               | 1.92                |   7  | 3.7 | 10.7 |					
+| ![](images/espada/1.jpg "") ![](images/oro/7.jpg "") ![](images/oro/6.jpg "") de mano   |  ?           |        0.0015581    |  21/21       |  28/39       |  1               | 0.92               |  2               | 1.92              |   7  | 3.7 | 10.7 |
 | ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.0004220    |  16/21       |  39/39       |  0.76               | 1               |  1.52               | 2               |   5.32  | 4 | 9.32 |
+
+
 
 Calculo de probabilidad de obtener mano:
 `p(A and B and C) =`
@@ -366,7 +372,7 @@ Podriamos decir que tenemos 3 espectros de comportamiento:
 ## Próximos pasos en el analísis
 
 * Encontrar mejores formas de clasificar valor de las manos.
-* Calcular probabilidad del envido.
+* Hacer una simulación para detectar el top de manos con más valor.
 * Calcular probabilidad de ganar en función de la clasificación de la mano.
 * Calcular probabilidad de las manos.¨
 * Modelar estados del juego
