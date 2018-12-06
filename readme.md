@@ -355,6 +355,14 @@ Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunid
 | Miedoso | Solo canta cuando tiene cartas excelentes. Prácticamente renuncia a todos los aumentos de apuesta. | 0 | Nulo| (0, 0.20) | Muy Bajo | (0.20, 0.40) | Bajo | Muy Buenas |
 
 
+Podriamos decir que tenemos 3 espectros de comportamiento:
+
+1. Pasivo <-> Agresivo  
+2. Conservador <-> Ariesgado
+3. Estatico <-> Dinamico
+
+**¿Se les ocurren otras clasificaciones?**
+
 ## Próximos pasos en el analísis
 
 * Encontrar mejores formas de clasificar valor de las manos.
