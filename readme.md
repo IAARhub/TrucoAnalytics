@@ -125,6 +125,7 @@ Vamos a rankear las cartas:
 | ![](images/espada/5.jpg "") ![](images/basto/5.jpg "") ![](images/oro/5.jpg "") ![](images/copa/5.jpg "")       | 13      |    0.07 | 0.05 |
 | ![](images/espada/4.jpg "") ![](images/basto/4.jpg "") ![](images/oro/4.jpg "") ![](images/copa/4.jpg "")       | 14      |    0 | 0.05 |
 
+**PROBABILIDADES NECESITAN SER MODIFICADAS :)**
 
 #### Combinatoria de manos
 
@@ -215,9 +216,9 @@ Entonces por ejemplo...
 **P** = Puntaje
 **Pr** = Probabilidad
 
-| Mano                                                                                         | Ranking       | Pr de mano  | P d/ envido  | P d/  truco  | Pr d/ ganar envido  | Pr d/ ganar truco  | Valor min de tanto  | Valor min de truco  | Valor max de tanto  | Valor max de truco  | Valor de la mano  |
-| ---------------------------------------------------------------------------------------------|:-------------:|:--------------:|:------------:|:------------:|:-------------------:|:------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|		
-| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  1           |        0.0000625    |  21/21       |  29/39       |  1               | 0.86               |  2               | 1.72                |   7  | 3.44 | 10.44 |
+| Mano                                                                                         | Ranking       | Pr de mano         | P d/ envido  | P d/  truco  | Pr d/ ganar envido  | Pr d/ ganar truco  | Valor min de tanto  | Valor min de truco  | Valor max de tanto  | Valor max de truco  | Valor de la mano  |
+| ---------------------------------------------------------------------------------------------|:-------------:|:------------------:|:------------:|:------------:|:-------------------:|:------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|		
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano  |  1           |        0.0000625    |  21/21       |  29/39       |  1               | 0.86               |  2               | 1.72                |   7  | 3.44 | 10.44 |
 | ![](images/basto/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  2           |        0.0000625    |  21/21       |  28/39       |  1               | 0.80               |  2               | 1.6                |   7  | 3.2 | 10.20 |					
 | ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.000015625    |  16/21       |  39/39       |  0.76               | 1               |  1.52               | 2               |   5.32  | 4 | 9.32 |
 
@@ -232,12 +233,15 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 
 ### Modelado de acciones, jugadas y tácticas:
 
+
+#### Acciones (Actions)
+
 | Acción         | Denominación       |
 | ------------- |:-------------:|
 | Tirar carta         | check       |
 | Irse al mazo         | fold       |
 | Envido         | bet       |
-| Envido Envido         | bet       |
+| Envido Envido         | raise       |
 | Real envido         | raise       |
 | Envido Real envido         | raise       |
 | Falta envido         | raise && allIn       |
@@ -248,6 +252,22 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 | No Quiero (Envido)        | pass       |
 | No Quiero (Truco)       | fold       |
 
+#### Jugadas (Plays)
+
+| Jugada         | Descripción      |
+| ------------- |:-------------:|
+| Ir a la pesca         | Se tiene tanto o truco medio o alto, no se canta y se espera a que el contrincante cante para doblar la apuesta o aceptar.    |
+| Envido de Cobertura         | Se tiene buen tanto pero malas cartas para el  truco, el oponente canta truco en la primera mano, y se dice "el envido esta primero" para postergar el truco y obtener puntos del tanto antes de retirarse.     |
+| Mentira del tanto         | No se tienen buen tanto, se canta o se acepta y al momento de decir los puntos se miente por un nro más alto, esperando a que se termine la partida y el rival haya olvidado pedir que se muestren los tantos.      |
+| Trampa del truco        | Se tiene muy buenas cartas de envio y cartas medias/buenas de truco, en la primera mano cantamos truco esperando que nuestro oponente nos diga "el envido esta primero" de manera tal que podamos doblar la apuesta.      |
+| Achicar         | No se tiene buenas cartas (tanto o truco), el oponente canta primero y  dobla la apuesta buscando que el oponente la rechace.     |
+| Hacerlos entrar         | Se tiene buenas cartas, el contricante canta primero y se dobla la apuesta para buscar  más puntos.      |
+| Jugar callado        | No se tiene buenas cartas, y no se canta nada esperando que pase desapercibido para el oponente y tampoco lo haga.      |
+| Hacersela        | Apurar a un oponente para que juege cuando no es su turno, de manera que tire y queme su carta.       |
+| El error        | Estar hablando y simular que se te escapó la palabra truco o envido de manera que los oponentes quieran tomar provecho, acepten y/o doblen la apuesta esperando que nosotros no tengamos nada.       |
+| Falta envido de Cobertura      | El oponente esta a pocos puntos de ganar (menos de 3) , vos no tenes muchos tantos, te canta tanto o te dobla una apuesta. Para minimizar riesgos le cantas falta envido para reducir los puntos en juego.      |
+| Apriete        | Nuestro oponente esta a pocos puntos de perder, tenemos cartas y sabiendo que sí o sí debe aceptar, cantamos tanto o truco para acepte y pierda.    |
+
 
 ### Modelado de perfiles de jugadores
 
@@ -257,7 +277,7 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 
 **Formula del indice de mentira:**
 
-`Mi = (( (bets when mano = 'malas' || 'muy malas')  + (raise when mano = 'malas' || 'muy malas') ) / (bets + raises) ) * 100`
+`Mi = ((bets,raises, calls when mano = 'malas' || 'muy malas')  / (bets + raises + calls) ) * 100`
 
 `Mi = (0,1)`
 
@@ -275,7 +295,7 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 
 **Formula indice de agresión:**
 
-`Ai = (bets + raises) / (bets + raises + calls + checks) * 100`
+`Ai = (bets + raises) / (bets + raises + calls + checks + passes) * 100`
 `Mi = (0,1)`
 
 | Expresión matematica       | Termino linguistico       | 
