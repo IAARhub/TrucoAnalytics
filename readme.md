@@ -150,18 +150,18 @@ E = **Envido**
 m = 'Soy mano'
 p = 'Soy pie'
 
-| Expresión matematica       | Termino linguistico       |  P de ganar       | Termino linguistico       | 
-| ------------- |:-------------:| ------------- |:-------------:|
-| Em = 33      						 | Máximo     | 1.0 | Absoluta |
-| Ep = 33      						 |      | 0.95 | Casi Absoluta |
-| Em = (28, 32)      				 | Muy Alto    | 0.85~ | Muy Alta |
-| Ep = (28, 32)      				 |      | 0.80~ | |
-| Em = (26, 27)      				 | Alto     | 0.66~ | Alta |
-| Ep = (26, 27)      				 |      | 0.64~ |  |
-| Em = (20, 25)      				 | Bajo     | 0.50~ | Media |
-| Ep = (20, 25)      				 |      | 0.45~ | |
-| Em = (1, 7)      					 | Muy Bajo   | 0.19~ | Muy baja |
-| Ep = (1, 7)      					 |     | 0.14~ | |
+| Expresión matematica       | Puntaje  |     Termino linguistico       |  P de ganar       | Termino linguistico       | 
+| ------------- |:-------------:| ------------- | ------------- |:-------------:|
+| Em = 33      					| 21	 | Máximo     | 1.0 | Absoluta |
+| Ep = 33      					| 21 |      | 0.95 | Casi Absoluta |
+| Em = (28, 32)      			|	(16,20) | Muy Alto    | 0.85~ | Muy Alta |
+| Ep = (28, 32)      			|	(16,20) |      | 0.80~ | |
+| Em = (26, 27)      			|	(14,15) | Alto     | 0.66~ | Alta |
+| Ep = (26, 27)      			|	(14,15) |      | 0.64~ |  |
+| Em = (20, 25)      			|	(8,13) | Bajo     | 0.50~ | Media |
+| Ep = (20, 25)      			|	(8,13) |      | 0.45~ | |
+| Em = (1, 7)      				|	(1,7) | Muy Bajo   | 0.19~ | Muy baja |
+| Ep = (1, 7)      				|	(1,7) |     | 0.14~ | |
 
 
 Probabilidad de ganar se calcula en base al total de casos que mi mano puede ganar el envido sobre el total de casos posibles de envido que tenga el oponente
@@ -183,6 +183,7 @@ Ep = (28, 32)
 P(g)Ep = (0.90 + 0.85 + 0.81 + 0.76 + 0.71) / 5 = 0.80`
 
 
+
 Vamos por su valor en el **truco**:
 
 
@@ -190,24 +191,35 @@ Para el truco vamos darle un puntaje a cada carta de nuestra mano en base a su r
 
 Ejemplo: Si tengo un ancho de espada, es decir ranking 1 son 14 puntos (inversamente proporcional a la cantidad de casos)
 
-| Carta         | Ranking       |  Puntaje  |
-| ------------- |:-------------:|:-----:|
-|   ![](images/espada/1.jpg "") 																				  | 1 | 14 | 
-| ![](images/basto/1.jpg "")     																				 | 2     |   13 | 
-| ![](images/espada/7.jpg "")  																					   | 3      |    12 | 
-| ![](images/oro/7.jpg "")   																					  | 4      |    11 | 
-| ![](images/espada/3.jpg "") ![](images/basto/3.jpg "") ![](images/oro/3.jpg "") ![](images/copa/3.jpg "")       | 5      |    10 | 
-| ![](images/espada/2.jpg "") ![](images/basto/2.jpg "") ![](images/oro/2.jpg "") ![](images/copa/2.jpg "")       | 6      |    9 | 
-| ![](images/oro/1.jpg "") ![](images/copa/1.jpg "")     														  | 7      |    8 |
-| ![](images/espada/12.jpg "") ![](images/basto/12.jpg "") ![](images/oro/12.jpg "") ![](images/copa/12.jpg "")       | 8      |    7 | 
-| ![](images/espada/11.jpg "") ![](images/basto/11.jpg "") ![](images/oro/11.jpg "") ![](images/copa/11.jpg "")       | 9      |    6 | 
-| ![](images/espada/10.jpg "") ![](images/basto/10.jpg "") ![](images/oro/10.jpg "") ![](images/copa/10.jpg "")       | 10      |    5 | 
-|  ![](images/basto/7.jpg "")  ![](images/copa/7.jpg "")       															| 11      |    4 | 
-| ![](images/espada/6.jpg "") ![](images/basto/6.jpg "") ![](images/oro/6.jpg "") ![](images/copa/6.jpg "")       | 12      |    3 | 
-| ![](images/espada/5.jpg "") ![](images/basto/5.jpg "") ![](images/oro/5.jpg "") ![](images/copa/5.jpg "")       | 13      |    2 | 
-| ![](images/espada/4.jpg "") ![](images/basto/4.jpg "") ![](images/oro/4.jpg "") ![](images/copa/4.jpg "")       | 14      |    1 | 
+| Carta         | Ranking       |  Puntaje  | Expresión linguistica  |
+| ------------- |:-------------:|:-----:| :-----:|
+|   ![](images/espada/1.jpg "") 																				  | 1 | 14 | Muy Alto  |
+| ![](images/basto/1.jpg "")     																				 | 2     |   13 |   |
+| ![](images/espada/7.jpg "")  																					   | 3      |    12 |    | 
+| ![](images/oro/7.jpg "")   																					  | 4      |    11 |    |
+| ![](images/espada/3.jpg "") ![](images/basto/3.jpg "") ![](images/oro/3.jpg "") ![](images/copa/3.jpg "")       | 5      |    10 |  Alto  |
+| ![](images/espada/2.jpg "") ![](images/basto/2.jpg "") ![](images/oro/2.jpg "") ![](images/copa/2.jpg "")       | 6      |    9 |    |
+| ![](images/oro/1.jpg "") ![](images/copa/1.jpg "")     														  | 7      |    8 |  Medio |
+| ![](images/espada/12.jpg "") ![](images/basto/12.jpg "") ![](images/oro/12.jpg "") ![](images/copa/12.jpg "")       | 8      |    7 |   | 
+| ![](images/espada/11.jpg "") ![](images/basto/11.jpg "") ![](images/oro/11.jpg "") ![](images/copa/11.jpg "")       | 9      |    6 |    |
+| ![](images/espada/10.jpg "") ![](images/basto/10.jpg "") ![](images/oro/10.jpg "") ![](images/copa/10.jpg "")       | 10      |    5 |    |
+|  ![](images/basto/7.jpg "")  ![](images/copa/7.jpg "")       															| 11      |    4 |  Bajo  |
+| ![](images/espada/6.jpg "") ![](images/basto/6.jpg "") ![](images/oro/6.jpg "") ![](images/copa/6.jpg "")       | 12      |    3 |    |
+| ![](images/espada/5.jpg "") ![](images/basto/5.jpg "") ![](images/oro/5.jpg "") ![](images/copa/5.jpg "")       | 13      |    2 |    |
+| ![](images/espada/4.jpg "") ![](images/basto/4.jpg "") ![](images/oro/4.jpg "") ![](images/copa/4.jpg "")       | 14      |    1 |    |
 
 
+
+Entonces por ejemplo...
+
+**P** = Puntaje
+**Pr** = Probabilidad
+
+| Mano        | Ranking       | P consolidado  | P d/ envido  | P d/  truco  | Pr d/ ganar envido  | Pr d/ ganar truco  | Valor min de tanto  | Valor min de truco  | Valor max de tanto  | Valor max de truco  | Valor de la mano  |
+| ------------- |:-------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|							
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  0.88  | 16/21      |  39/39  |  0.76  | 0.93 |  1.52  | 1.86 |   5.32  | 3.72 | 9.04 |
+
+La probabilidad de ganar truco se basa en la probabilidad conjunta de que ganes dos manos con tus mejores cartas. El valor minimo de tanto es lo minimo que podes ganar (Envido) multiplicado por la probabilidad de ganar esos puntos. Mismo con el truco. El valor máximo es en el envido el (envido,envido, real envido = 7 puntos) y en el truco (quiero vale 4 = 4), en ambos casos se multiplica por la probabilidad de obtener dichos puntos.
 
 ####  P d/ derrotar a otra carta     	
 
@@ -302,8 +314,10 @@ Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunid
 
 ## Próximos pasos en el analísis
 
-* Clasificar valor de las manos.
-* Calcular probabilidad de las manos.
+* Encontrar mejores formas de clasificar valor de las manos.
+* Calcular probabilidad del envido.
+* Calcular probabilidad de ganar en función de la clasificación de la mano.
+* Calcular probabilidad de las manos.¨
 * Modelar estados del juego
 * Clasificar jugadas (plays)
 * Calcular valor esperado de jugadas y acciones segun diferentes estados.

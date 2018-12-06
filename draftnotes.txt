@@ -1,0 +1,4 @@
+Una manera de evaluar la mano podria ser :
+
+(0.95 * 2) / (0.05 * 2) = 
+Probabilidad de ganar envido * puntos del envido / probabilidad de perder envido * puntos del envido
