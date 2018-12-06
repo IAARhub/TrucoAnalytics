@@ -215,11 +215,11 @@ Entonces por ejemplo...
 **P** = Puntaje
 **Pr** = Probabilidad
 
-| Mano                                                                                         | Ranking       | Pr de mano  |  P d/ envido  | P d/  truco  | Pr d/ ganar envido  | Pr d/ ganar truco  | Valor min de tanto  | Valor min de truco  | Valor max de tanto  | Valor max de truco  | Valor de la mano  |
-| ---------------------------------------------------------------------------------------------|:-------------:|:--------------:|:--------------:|:------------:|:------------:|:-------------------:|:------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|		
-| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  1           | 0.0000625       |   21/21       |  29/39       |  1               | 0.86               |  2               | 1.72                |   7  | 3.44 | 10.44 |
-| ![](images/basto/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  2           |  0.0000625     |     21/21       |  28/39       |  1               | 0.80               |  2               | 1.6                |   7  | 3.2 | 10.20 |					
-| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |  0.000015625   |   16/21       |  39/39       |  0.76               | 1               |  1.52               | 2               |   5.32  | 4 | 9.32 |
+| Mano                                                                                         | Ranking       | Pr de mano  | P d/ envido  | P d/  truco  | Pr d/ ganar envido  | Pr d/ ganar truco  | Valor min de tanto  | Valor min de truco  | Valor max de tanto  | Valor max de truco  | Valor de la mano  |
+| ---------------------------------------------------------------------------------------------|:-------------:|:--------------:|:------------:|:------------:|:-------------------:|:------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|		
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  1           |        0.0000625    |  21/21       |  29/39       |  1               | 0.86               |  2               | 1.72                |   7  | 3.44 | 10.44 |
+| ![](images/basto/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  2           |        0.0000625    |  21/21       |  28/39       |  1               | 0.80               |  2               | 1.6                |   7  | 3.2 | 10.20 |					
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.000015625    |  16/21       |  39/39       |  0.76               | 1               |  1.52               | 2               |   5.32  | 4 | 9.32 |
 
 
 
