@@ -388,6 +388,12 @@ Podriamos decir que tenemos 3 espectros de comportamiento:
 
 ¡No dudes en participar de este proyecto con tus ideas!
 
+## Recursos
+
+* AI for Imperfect-Information Games: Beating Top Humans in No-Limit Poker (2018). Microsoft Research. De https://www.youtube.com/watch?v=McV4a6umbAY
+* Tough Poker Player: Brains Vs. AI Update. Carnegie Mellon University (2017). De https://www.youtube.com/watch?v=CRiH8yCskAE
+* DeepStackAI Youtube Channel. De https://www.youtube.com/channel/UC4vSx3bbs8dbaHl2tkzU8Nw
+
 ## Referencias y Bibliografía adicional
 
 * David Sklansky (1987). The Theory of Poker. Two Plus Two Publications. ISBN 1-880685-00-0.
