@@ -65,7 +65,7 @@ El valor esperado (EV) es el puntaje que podemos ganar al tomar una acción (Ejem
 * **Expectativa positiva**:
 EV+ , o expectativa positiva, es aquella acción que maxima la utilidad en función de su probabilidad de ocurrencia dados ciertas jugadas en contextos de información incompleta.
 
-* Teorema fundamental del Poker. (Aplica para el Truco)
+* **Teorema fundamental del Poker.** (Aplica para el Truco)
 El teorema fundamental del poker, propuesto por David Sklansky, afirma que 'Siempre que un jugador juegue de manera distinta a la que lo habría hecho si conociera las cartas del rival, su rival saca ventaja; siempre que un jugador haga el mismo movimiento que haría si conociera las cartas del rival, él saca ventaja.'
 
 * **Pozo del juego (Game's Equity)**:
@@ -105,9 +105,9 @@ Vamos a usar lógica difusa para clasificar nuestras cartas:
 #### P d/ obtener carta      
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
-| A = 0.1      				 | Alta      |
-| A = 0.05      				 | Media     |
-| A = 0.025      				 | Baja    |
+| A = 0.146     				 | Alta      |
+| A = 0.277      				 | Media     |
+| A = 0.075      				 | Baja    |
 
 Vamos a rankear las cartas:
 
@@ -246,6 +246,7 @@ Entonces por ejemplo...
 | ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.0004220    |  16/21       |  39/39       |  0.76               | 1               |  1.52            | 2               |   5.32  | 4 | 9.32 |
 
 
+**ESTAS PROBABILIDADDES NECESITAN REVISION**
 
 Calculo de probabilidad de obtener mano:
 `p(A and B and C) =`
