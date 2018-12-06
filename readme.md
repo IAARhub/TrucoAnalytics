@@ -131,13 +131,13 @@ Vamos a rankear las cartas:
 
 Formula: 
 
-`P = 40! / (40 - 3)! =  40! / 37! = 40 * 39 * 38 = 59280`
+`P = 40! / (40 - 3)! =  40! / 37! = (40 * 39 * 38) / 6 = 9,880`
 
 **59,280** son la cantidad de combinaciones posibles que tenemos. Es un número muy grande así que vamos a clasificar esas manos con el uso de lógica difusa.
 
 Si consideramos la diferentes combinación en función de si sos mano o pie las posibilidades son:
 
-`59280 * 2 =` **118,560**
+`9880 * 2 =` **19,760**
 
 Vamos a clasificar la mano por:
 
