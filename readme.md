@@ -217,7 +217,7 @@ Entonces por ejemplo...
 
 | Mano                                                                                         | Ranking       | P consolidado  | P d/ envido  | P d/  truco  | Pr d/ ganar envido  | Pr d/ ganar truco  | Valor min de tanto  | Valor min de truco  | Valor max de tanto  | Valor max de truco  | Valor de la mano  |
 | ---------------------------------------------------------------------------------------------|:-------------:|:--------------:|:------------:|:------------:|:-------------------:|:------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|							
-| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.88    |  16/21       |  39/39       |  0.76               | 0.93               |  1.52               | 1.86                |   5.32  | 3.72 | 9.04 |
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.88    |  16/21       |  39/39       |  0.76               | 1               |  1.52               | 2               |   5.32  | 4 | 9.32 |
 | ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  ?           |        0.74    |  21/21       |  29/39       |  1               | 0.86               |  2               | 1.72                |   7  | 3.44 | 10.44 |
 
 1*
