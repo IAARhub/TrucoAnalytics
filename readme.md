@@ -245,8 +245,7 @@ La probabilidad de ganar truco se basa en la probabilidad conjunta de que ganes 
 
 Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano es la más valiosa. Si uno tiene en cuenta el valor (equity) de la mano, pareceria que tener buen envido es más valioso que tener puntos para el truco. **¿A vos qué te parece?**
 
-
-####  P d/ derrotar a otra carta     	
+  	
 
 ### Modelado de acciones, jugadas y tácticas:
 
