@@ -217,11 +217,14 @@ Entonces por ejemplo...
 
 | Mano                                                                                         | Ranking       | P consolidado  | P d/ envido  | P d/  truco  | Pr d/ ganar envido  | Pr d/ ganar truco  | Valor min de tanto  | Valor min de truco  | Valor max de tanto  | Valor max de truco  | Valor de la mano  |
 | ---------------------------------------------------------------------------------------------|:-------------:|:--------------:|:------------:|:------------:|:-------------------:|:------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|							
-| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  1?           |        0.88    |  16/21       |  39/39       |  0.76               | 0.93               |  1.52               | 1.86                |   5.32  | 3.72 | 9.04 |
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.88    |  16/21       |  39/39       |  0.76               | 0.93               |  1.52               | 1.86                |   5.32  | 3.72 | 9.04 |
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  ?           |        0.74    |  21/21       |  29/39       |  1               | 0.86               |  2               | 1.72                |   7  | 3.44 | 10.44 |
+
+1*
 
 La probabilidad de ganar truco se basa en la probabilidad conjunta de que ganes dos manos con tus mejores cartas. El valor minimo de tanto es lo minimo que podes ganar (Envido) multiplicado por la probabilidad de ganar esos puntos. Mismo con el truco. El valor máximo es en el envido el (envido,envido, real envido = 7 puntos) y en el truco (quiero vale 4 = 4), en ambos casos se multiplica por la probabilidad de obtener dichos puntos.
 
-**Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano es la más valiosa.**
+Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano es la más valiosa. Si uno tiene en cuenta el valor (equity) de la mano, pareceria que tener buen envido es más valioso que tener puntos para el truco. **¿A vos qué te parece?**
 
 
 ####  P d/ derrotar a otra carta     	
