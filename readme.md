@@ -105,8 +105,8 @@ Vamos a usar lógica difusa para clasificar nuestras cartas:
 #### P d/ obtener carta      
 | Expresión matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
-| A = 0.146     				 | Alta      |
-| A = 0.277      				 | Media     |
+| A = 0.277     				 | Alta      |
+| A = 0.146      				 | Media     |
 | A = 0.075      				 | Baja    |
 
 Vamos a rankear las cartas:
