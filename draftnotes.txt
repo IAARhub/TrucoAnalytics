@@ -1,1 +1,45 @@
 
+game tree
+
+node start
+
+pre-envido
+post-envido
+
+gamepot
+
+playerequity
+handvalue
+
+informationSet 
+
+mis cartas
+
+modelado del oponente
+
+=sus cartas
+im,a,v      --> neutrosophic inference t,i,f  --> defesaible confidence index
+
+
+acciones 
+
+  bete, check, bett, fold
+  
+  
+  
+  if bete  (Prob frecuen de) say yes && win (prob ab de ganar) * 2         ---> neutrosophic inference t,i,f  --> defesaible confidence index
+                             say yes && lost (prob ab de perder * -2       ---> neutrosophic inference t,i,f  --> defesaible confidence index
+			(prob frecuen de say no * 1 * 1                                ---> neutrosophic inference t,i,f  --> defesaible confidence index
+			
+			EV calculation, outcome expectation / real outcome
+			
+			reward signal
+
+Metric indice de efectividad de lectura de juego  aciertos / intentos
+Indice de puntos por partida puntos / c de paritdas
+puntos obtenidos opor mano / maximos puntos posibles obtenibles por mano
+
+  if check 0
+  
+  if fold 1 * -1
+			

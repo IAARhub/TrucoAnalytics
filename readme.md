@@ -81,6 +81,12 @@ Es un puntaje obtenido en base a la posición de las cartas en función del truco 
 * **Combinatoria:**
 Es el estudio de la probabilidad de obtener diferentes manos en particular.
 
+* **Set de información (Information set):**
+Es la información que el agente conoce en cierto estado del juego.
+
+* **Arbol de juego (Game Tree):**
+Es el esquema en el cuál se dan los posibles cursos de acción en el juego.
+
 ### Modelado de cartas y manos.
 
 **P = Probabilidad**
@@ -393,6 +399,7 @@ Podriamos decir que tenemos 3 espectros de comportamiento:
 * AI for Imperfect-Information Games: Beating Top Humans in No-Limit Poker (2018). Microsoft Research. De https://www.youtube.com/watch?v=McV4a6umbAY
 * Tough Poker Player: Brains Vs. AI Update. Carnegie Mellon University (2017). De https://www.youtube.com/watch?v=CRiH8yCskAE
 * DeepStackAI Youtube Channel. De https://www.youtube.com/channel/UC4vSx3bbs8dbaHl2tkzU8Nw
+* The State of Techniques for Solving Large Imperfect-Information Games, Including Poker. Microsoft Research (2016). De https://www.youtube.com/watch?v=QgCxCeoW5JI
 
 ## Referencias y Bibliografía adicional
 
