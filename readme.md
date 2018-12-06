@@ -237,10 +237,11 @@ Entonces por ejemplo...
 
 | Mano                                                                                         | Ranking       | Pr de mano         | P d/ envido  | P d/  truco  | Pr d/ ganar envido  | Pr d/ ganar truco  | Valor min de tanto  | Valor min de truco  | Valor max de tanto  | Valor max de truco  | Valor de la mano  |
 | ---------------------------------------------------------------------------------------------|:-------------:|:------------------:|:------------:|:------------:|:-------------------:|:------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|		
-| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano  |  1           |        0.0015581    |  21/21       |  29/39       |  1               | 0.95               |  2               | 1.95                |   7  | 3.8 | 10.8 |
-| ![](images/basto/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  2           |        0.0015581    |  21/21       |  28/39       |  1               | 0.92               |  2               | 1.92                |   7  | 3.7 | 10.7 |					
-| ![](images/espada/1.jpg "") ![](images/oro/7.jpg "") ![](images/oro/6.jpg "") de mano   |  ?           |        0.0015581    |  21/21       |  28/39       |  1               | 0.92               |  2               | 1.92              |   7  | 3.7 | 10.7 |
-| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.0004220    |  16/21       |  39/39       |  0.76               | 1               |  1.52               | 2               |   5.32  | 4 | 9.32 |
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano  |  1           |        0.0015581    |  21/21       |  29/39       |  1               | 0.95               |  2               | 1.90                |   7  | 3.8 | 10.8 |
+| ![](images/basto/1.jpg "") ![](images/espada/7.jpg "") ![](images/espada/6.jpg "") de mano   |  2           |        0.0015581    |  21/21       |  28/39       |  1               | 0.92               |  2               | 1.84                |   7  | 3.7 | 10.7 |					
+| ![](images/espada/1.jpg "") ![](images/oro/7.jpg "") ![](images/oro/6.jpg "") de mano   |  2           |        0.0015581    |  21/21       |  28/39            |  1               | 0.92               |  2               | 1.84              |   7  | 3.7 | 10.7 |
+| ![](images/basto/1.jpg "") ![](images/oro/7.jpg "") ![](images/oro/6.jpg "") de mano   |  3           |        0.0015581    |  21/21       |  27/39             |  1               | 0.89               |  2               | 1.78              |   7  | 3.56 | 10.56 |
+| ![](images/espada/1.jpg "") ![](images/espada/7.jpg "") ![](images/basto/1.jpg "") de mano   |  ?           |        0.0004220    |  16/21       |  39/39       |  0.76               | 1               |  1.52            | 2               |   5.32  | 4 | 9.32 |
 
 
 
