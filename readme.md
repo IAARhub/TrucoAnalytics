@@ -87,12 +87,15 @@ Es la información que el agente conoce en cierto estado del juego.
 * **Arbol de juego (Game Tree):**
 Es el esquema en el cuál se dan los posibles cursos de acción en el juego.
 
-### Modelado de cartas y manos.
+* **Persona:**
+Modelado de distintos perfiles de estrategia y/o personalidad de oponentes.
+
+## Modelado de cartas y manos.
 
 **P = Probabilidad**
 
 
-#### Cartas
+### Cartas
 
 
 Vamos a usar lógica difusa para clasificar nuestras cartas:
@@ -152,7 +155,7 @@ Cantidad de manos : `9,880`
 
 
 
-#### Combinatoria de manos
+### Combinatoria de manos
 
 Formula: 
 
@@ -263,10 +266,10 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 
   	
 
-### Modelado de acciones, jugadas y tácticas:
+## Modelado de acciones, jugadas y estrategias:
 
 
-#### Acciones (Actions)
+### Nivel operativo: Acciones (Actions)
 
 | Acción         | Denominación       |
 | ------------- |:-------------:|
@@ -284,7 +287,7 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 | No Quiero (Envido)        | pass       |
 | No Quiero (Truco)       | fold       |
 
-#### Jugadas (Plays)
+### Nivel táctico: Jugadas (Plays)
 
 | Jugada         | Descripción      |
 | ------------- |:-------------:|
@@ -301,11 +304,10 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 | Apriete        | Nuestro oponente esta a pocos puntos de perder, tenemos cartas y sabiendo que sí o sí debe aceptar, cantamos tanto o truco para acepte y pierda.    |
 
 
-### Modelado de perfiles de jugadores
+### Nivel estrategico: Perfiles de jugadores
 
 
-#### Según su perfil de estrategia
-
+#### Indicadores comportamentales:
 
 **Formula del indice de mentira:**
 
@@ -361,7 +363,19 @@ Coeficiente de varianza = Cv
 
 Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunidades que no lo hizo) , (B) Indice de agresión (Oportunidades que aumentó apuesta sobre oportunidades que no lo hizo) y (C) Indice de variabilidad (Frecuencia en la cambia el patrón de estrategia en función del resto)
 
-| Nombre  | Descripción | Indice de mentira | Expresión Linguistica | Indice de agresión | Expresión Linguistica | Indice de variabilidad | Expresión Linguistica |  Tendencia a cantar con manos |
+
+
+### Analisis conductual del perfil de oponente
+
+Podriamos decir que tenemos 3 espectros de comportamiento:
+
+1. Pasivo <-> Agresivo  
+2. Conservador <-> Ariesgado
+3. Estatico <-> Dinamico
+
+#### Definición de Personas:
+
+| Persona  | Descripción | Indice de mentira | Expresión Linguistica | Indice de agresión | Expresión Linguistica | Indice de variabilidad | Expresión Linguistica |  Tendencia a cantar con manos |
 | ------------- |:-------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | Creativo  | Cambia sus tácticas con frecuencia, crea nuevas jugadas espontaneamente. | (0,1) | Impredecible | (0,1) | Impredecible | (0.80, 1)  | Muy Alta | Impredecible |
 | Temerario | Miente con mucha frecuencia, y suele arriesgar muchos puntos teniendo cartas pobres.  | (0.80, 1) | Muy alto | (0.80, 1) | Muy alto | (0.20, 0.40) | Bajo | Malas |
@@ -371,11 +385,7 @@ Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunid
 | Miedoso | Solo canta cuando tiene cartas excelentes. Prácticamente renuncia a todos los aumentos de apuesta. | 0 | Nulo| (0, 0.20) | Muy Bajo | (0.20, 0.40) | Bajo | Muy Buenas |
 
 
-Podriamos decir que tenemos 3 espectros de comportamiento:
 
-1. Pasivo <-> Agresivo  
-2. Conservador <-> Ariesgado
-3. Estatico <-> Dinamico
 
 **¿Se les ocurren otras clasificaciones?**
 
