@@ -302,6 +302,7 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 | El error        | Estar hablando y simular que se te escapó la palabra truco o envido de manera que los oponentes quieran tomar provecho, acepten y/o doblen la apuesta esperando que nosotros no tengamos nada.       |
 | Falta envido de Cobertura      | El oponente esta a pocos puntos de ganar (menos de 3) , vos no tenes muchos tantos, te canta tanto o te dobla una apuesta. Para minimizar riesgos le cantas falta envido para reducir los puntos en juego.      |
 | Apriete        | Nuestro oponente esta a pocos puntos de perder, tenemos cartas y sabiendo que sí o sí debe aceptar, cantamos tanto o truco para acepte y pierda.    |
+| Pausa falsa        | Nuestro oponente nos canta envido, nosotros tenemos cartas altas para el tanto pero en lugar de decir si inmeditamente esperamos un poco para hacer pensar al oponenete que estamos mintiendo   |
 
 
 ### Nivel estrategico: Perfiles de jugadores
@@ -342,11 +343,26 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 | A = (0, 0.20)     				 | Muy Bajo     |
 | A = (0,1)     				 | Impredecible    |
 
+
+**Formula velocidad de respuesta:**
+Tiempo promedio acumulado en responder ante la última acción del oponente
+
+`Vr = ms`
+`Vr = (300,9000)`
+
+| Expresión matematica       | Termino linguistico       | 
+| ------------- |:-------------:|
+| A = (300, 800)     				 | Muy alta     |
+| A = (800, 1500)     				 | Alta     |
+| A = (1500, 3000)     				 | Media     |
+| A = (3000, 6000)     				 | Baja     |
+| A = (6000, 9000)     				 | Muy Baja     |
+
 **Formula Indice de variabilidad:**
 
 Coeficiente de varianza = Cv
 
-` Vi = v/( Cv(Ai) * Cv(Mi) )`
+` Vi = v3/( Cv(Ai) * Cv(Mi) * Cv(Vr) )`
 
 `Vi = (0,1)`
 
@@ -372,6 +388,7 @@ Podriamos decir que tenemos 3 espectros de comportamiento:
 1. Pasivo <-> Agresivo  
 2. Conservador <-> Ariesgado
 3. Estatico <-> Dinamico
+4. Crítico <-> Agil
 
 #### Definición de Personas:
 
