@@ -385,7 +385,7 @@ Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunid
 
 Podriamos decir que tenemos 3 espectros de comportamiento:
 
-1. Pasivo <-> Agresivo  
+1. Protectivo <-> Agresivo  
 2. Conservador <-> Ariesgado
 3. Estatico <-> Dinamico
 4. Crítico <-> Agil
