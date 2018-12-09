@@ -419,6 +419,9 @@ Un cuarto tipo se podría definir si tenemos en cuenta las pausas de juego:
 * ratio de aperturas: `ruedas.isMano ='true' + call(Envido) / ruedas`
 Este indicador nos dice cuanto es la probabilidad que nuestro oponente cante envido en primera mano. Es un indicador que nos puede ayudar a detectar ciertas tácticas como la pesca de tantos. O la importancia que le asigna el oponente a los tantos.
 
+* suerte: `manos altas, muy altas / total manos`
+Este indicador nos dice cuantas manos bravas tuvo nuestro oponente en base todas sus manos. Nos ayuda a identificar y estimar si la performance del oponente se debe a una buena estrategia o simplemente a su suerte.
+
 
 #### Indicadores de performance:
 
