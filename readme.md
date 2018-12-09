@@ -303,6 +303,7 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 | Falta envido de Cobertura      | El oponente esta a pocos puntos de ganar (menos de 3) , vos no tenes muchos tantos, te canta tanto o te dobla una apuesta. Para minimizar riesgos le cantas falta envido para reducir los puntos en juego.      |
 | Apriete        | Nuestro oponente esta a pocos puntos de perder, tenemos cartas y sabiendo que sí o sí debe aceptar, cantamos tanto o truco para acepte y pierda.    |
 | Pausa falsa        | Nuestro oponente nos canta envido, nosotros tenemos cartas altas para el tanto pero en lugar de decir si inmeditamente esperamos un poco para hacer pensar al oponenete que estamos mintiendo   |
+| Intimidar        | No tenemos cartas buenas, el oponente nos canta envido o truco y nosotros casi instantaneamente decimos "quiero" o aumentamos apuesta, haciendo creer al oponente que estamos seguros de nuestras cartas. |
 
 
 ### Nivel estrategico: Perfiles de jugadores
@@ -388,6 +389,8 @@ Podriamos decir que tenemos 3 espectros de comportamiento:
 1. Protectivo <-> Agresivo  
 2. Conservador <-> Ariesgado
 3. Estatico <-> Dinamico
+
+Un cuarto tipo se podría definir si tenemos en cuenta las pausas de juego:
 4. Crítico <-> Agil
 
 #### Definición de Personas:
@@ -401,10 +404,41 @@ Podriamos decir que tenemos 3 espectros de comportamiento:
 | Conservador | Canta cuando tiene buenas cartas. Suele decir que no quiere cuando tiene cartas malas. | (0.20, 0.40) | Bajo| (0.20, 0.40) | Bajo | (0.20, 0.40) | Bajo | Muy Buenas o Buenas |
 | Miedoso | Solo canta cuando tiene cartas excelentes. Prácticamente renuncia a todos los aumentos de apuesta. | 0 | Nulo| (0, 0.20) | Muy Bajo | (0.20, 0.40) | Bajo | Muy Buenas |
 
-
-
-
 **¿Se les ocurren otras clasificaciones?**
+
+
+#### Otros indicadores de juego:
+
+* porcentaje de 2Bet: `(2bet raises / total raises) * 100` Esta es la cantidad de veces que el jugador aumenta la apuesta ante una apuesta inicial del oponente. Ejem.: 'Truco, Quiero re truco'
+* porcentaje de 3Bet: `(3bet raises / total raises) * 100` Esta es la cantidad de veces que el jugador aumenta la apuesta ante una apuesta 2bet del oponente. Ejem: 'Quiero re truco, Quiero vale 4.'
+* porcentaje de 4Bet: `(4bet raises / total raises) * 100` Esta es la cantidad de veces que el jugador aumenta la apuesta ante una apuesta 3bet del oponente. Ejem: 'Envido, Envido, Real Envido, Falta envido'
+
+#### Indicadores de performance:
+
+* Ratio de Partidas ganadas / Partidas jugadas.
+* Promedio de puntos por rueda: score / rounds 
+* Promedio de puntos por rueda con cartas altas:  `(score / rounds ) when manos altas, muy altas`
+* Promedio de puntos por rueda con cartas medias: `(score / rounds ) when manos medias`
+* Promedio de puntos por rueda con cartas bajas:  `(score / rounds ) when manos bajas, muy bajas`
+
+
+## Ruedas y partidas
+
+### Momentos del juego
+
+* Partidas = Juego a 15 o 30 puntos obtenidos por uno de los jugadores.
+
+Las partidas se subdividen en dos momentos:
+
+1. Malas (de 0 a 15 puntos).
+2. Buenas (de 15 a 30 puntos).'
+
+* Ruedas = Juego parte de la partida que necesita al menos 2 rounds ganados por un jugador.
+
+La rueda se subdivide en 3 rounds. Y tiene dos momentos:
+
+1. Momento Pre-Envido (1er Round)
+2. Momento Post-Envido (2do y 3er Round)
 
 ## Próximos pasos en el analísis
 
