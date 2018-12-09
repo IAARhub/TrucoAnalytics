@@ -90,6 +90,9 @@ Es el esquema en el cuál se dan los posibles cursos de acción en el juego.
 * **Persona:**
 Modelado de distintos perfiles de estrategia y/o personalidad de oponentes.
 
+* **Rango de manos:**
+Modelado deductivo del posible rango de manos que tiene nuestro oponente en función de la información disponible en el juego.
+
 ## Modelado de cartas y manos.
 
 **P = Probabilidad**
@@ -412,6 +415,10 @@ Un cuarto tipo se podría definir si tenemos en cuenta las pausas de juego:
 * porcentaje de 2Bet: `(2bet raises / total raises) * 100` Esta es la cantidad de veces que el jugador aumenta la apuesta ante una apuesta inicial del oponente. Ejem.: 'Truco, Quiero re truco'
 * porcentaje de 3Bet: `(3bet raises / total raises) * 100` Esta es la cantidad de veces que el jugador aumenta la apuesta ante una apuesta 2bet del oponente. Ejem: 'Quiero re truco, Quiero vale 4.'
 * porcentaje de 4Bet: `(4bet raises / total raises) * 100` Esta es la cantidad de veces que el jugador aumenta la apuesta ante una apuesta 3bet del oponente. Ejem: 'Envido, Envido, Real Envido, Falta envido'
+
+* ratio de aperturas: `ruedas.isMano ='true' + call(Envido) / ruedas`
+Este indicador nos dice cuanto es la probabilidad que nuestro oponente cante envido en primera mano. Es un indicador que nos puede ayudar a detectar ciertas tácticas como la pesca de tantos. O la importancia que le asigna el oponente a los tantos.
+
 
 #### Indicadores de performance:
 
