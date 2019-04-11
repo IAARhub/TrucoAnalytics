@@ -1,20 +1,21 @@
+<img src="https://github.com/IAARhub/NewsDSS-Argentina/raw/master/iaarblack.png" width="128" > HUB
 # Analisis computacional-cognitivo-conductual del juego de cartas Truco Argentino.
 
 ![](http://www.tornquistdistrital.com.ar/wp-content/uploads/2017/09/Trucoo.jpg "") 
 
-[DESAFIO] **¿Cómo hacer que una computadora juegue mejor que un humano al truco?**
-¿Podemos crear una IA para el truco?
+[DESAFIO] **Â¿CÃ³mo hacer que una computadora juegue mejor que un humano al truco?**
+Â¿Podemos crear una IA para el truco?
 
-**Resumen:** El Truco es un juego de cartas Argentino popularmente jugado en el todo el país y el cono sur. 
-Es un juego de estrategia competitivo basado en turnos, de suma cero, estados finitos e información incompleta, lo cúal quiere decir que los jugadores basaran sus estrategias en base a especulaciones en cuanto a las cartas de los demas.
-En los últimos tiempos, han existido numerosos articulos cientificos implementando modelos de aprendizaje reforzado en juegos de dichas caracteristicas. No obstante, aun no hay ningun trabajo que haya analizado este particular juego Argentino.
-El próposito de este proyecto es analizar este juego desde un aspecto computacional para poder, luego, modelar un agente de aprendizaje reforzado.
-Para dicho fin, primero vamos a hacer una revisión de los trabajos cientificos en juegos similares (como el poker), luego conceptualizar algunos terminos clave para abordar dicho problema, proponemos en este trabajo un modelado del oponente en función del comportamiento y estilo cognitivo de jugadores de truco y finalmente, invitamos a la comunidad al involucramiento en el desarrollo de un agente de aprendizaje reforzado para resolver este problema. ¿Cuál creen qué es el mejor enfoque para abordar el problema? ¿Qué algoritmo usarias?
+**Resumen:** El Truco es un juego de cartas Argentino popularmente jugado en el todo el paÃ­s y el cono sur. 
+Es un juego de estrategia competitivo basado en turnos, de suma cero, estados finitos e informaciÃ³n incompleta, lo cÃºal quiere decir que los jugadores basaran sus estrategias en base a especulaciones en cuanto a las cartas de los demas.
+En los Ãºltimos tiempos, han existido numerosos articulos cientificos implementando modelos de aprendizaje reforzado en juegos de dichas caracteristicas. No obstante, aun no hay ningun trabajo que haya analizado este particular juego Argentino.
+El prÃ³posito de este proyecto es analizar este juego desde un aspecto computacional para poder, luego, modelar un agente de aprendizaje reforzado.
+Para dicho fin, primero vamos a hacer una revisiÃ³n de los trabajos cientificos en juegos similares (como el poker), luego conceptualizar algunos terminos clave para abordar dicho problema, proponemos en este trabajo un modelado del oponente en funciÃ³n del comportamiento y estilo cognitivo de jugadores de truco y finalmente, invitamos a la comunidad al involucramiento en el desarrollo de un agente de aprendizaje reforzado para resolver este problema. Â¿CuÃ¡l creen quÃ© es el mejor enfoque para abordar el problema? Â¿QuÃ© algoritmo usarias?
 
 
 **Nota:** Estamos analizando el truco Argentino **sin** flor y de **a dos** jugadores.
 
-## ¿Cómo contribuir?
+## Â¿CÃ³mo contribuir?
 
 * Si te interesa participar simplemente clona este repositorio y unite al slack **haciendo clic** a este link: http://iaar-slack.herokuapp.com/
 * Si ya estas en slack podes ingresar con este link: http://iaar.slack.com
@@ -24,9 +25,9 @@ Para dicho fin, primero vamos a hacer una revisión de los trabajos cientificos e
 Patricio J. Gerpe
 
 ## Preliminares
-### Revisión de literatura
+### RevisiÃ³n de literatura
 
-En tanto no se han encontrado artículos cientificos en respecto al juego de cartas 'Truco' si existe artículos cientificos que abordan juegos de cartas de información imperfecta tal como el Poker.
+En tanto no se han encontrado artÃ­culos cientificos en respecto al juego de cartas 'Truco' si existe artÃ­culos cientificos que abordan juegos de cartas de informaciÃ³n imperfecta tal como el Poker.
 Ejemplos incluyen:
 
 * Heinrich, J., & Silver, D. (2016). Deep reinforcement learning from self-play in imperfect-information games. arXiv preprint arXiv:1603.01121. https://arxiv.org/pdf/1603.01121.pdf
@@ -36,8 +37,8 @@ Ejemplos incluyen:
 * Ganzfried, S., & Yusuf, F. (2017). Computing human-understandable strategies: Deducing fundamental rules of poker strategy. Games, 8(4), 49.
 * Bowling, M., Burch, N., Johanson, M., & Tammelin, O. (2017). Heads-up limit hold'em poker is solved. Communications of the ACM, 60(11), 81-88.
 * Li, X., & Miikkulainen, R. (2018, July). Opponent modeling and exploitation in poker using evolved recurrent neural networks. In Proceedings of the Genetic and Evolutionary Computation Conference (pp. 189-196). ACM.
-* Dahl, F. A. (2001, September). A reinforcement learning algorithm applied to simplified two-player Texas Hold’em poker. In European Conference on Machine Learning (pp. 85-96). Springer, Berlin, Heidelberg.
-* Teófilo, L. F., Passos, N., Reis, L. P., & Cardoso, H. L. (2012). Adapting strategies to opponent models in incomplete information games: a reinforcement learning approach for poker. In Autonomous and Intelligent Systems (pp. 220-227). Springer, Berlin, Heidelberg.
+* Dahl, F. A. (2001, September). A reinforcement learning algorithm applied to simplified two-player Texas Holdâ€™em poker. In European Conference on Machine Learning (pp. 85-96). Springer, Berlin, Heidelberg.
+* TeÃ³filo, L. F., Passos, N., Reis, L. P., & Cardoso, H. L. (2012). Adapting strategies to opponent models in incomplete information games: a reinforcement learning approach for poker. In Autonomous and Intelligent Systems (pp. 220-227). Springer, Berlin, Heidelberg.
 * Erev, I., & Barron, G. (2005). On adaptation, maximization, and reinforcement learning among cognitive strategies. Psychological review, 112(4), 912. https://www.researchgate.net/profile/Ido_Erev/publication/7505648_On_Adaptation_Maximization_and_Reinforcement_Learning_Among_Cognitive_Strategies/links/00b49524696d50e515000000.pdf
 * Szita, I. (2012). Reinforcement learning in games. In Reinforcement Learning (pp. 539-577). Springer, Berlin, Heidelberg.
 * Kovacic, M. (2015). Opponent Modelling in Games with Imperfect Information.
@@ -52,46 +53,46 @@ Ejemplos incluyen:
 ### Conceptos Clave
 
 * **Modelado del oponente**:
-Dado que no podemos saber qué cartas tiene nuestro oponente es necesario poder modelar el estilo del juego del mismo.
-El modelado del oponente busca clasificar a nuestro oponente en base a su estilo estilo cognitivo (Toma deciciones de manera racional VS toma decisiones de manera intuitiva) así como su comportamiento. ¿Con qué frecuencia el oponente cambia su estilo de juego? 
-¿Cuál es la frecuencia en la qué miente? ¿Tiene predominancia el comportamiento agresivo (Ejem.: Aumentar apuestas) o el comportamiento defensivo (Ejem.: Rechazar apuestas en contextos de malas cartas).
+Dado que no podemos saber quÃ© cartas tiene nuestro oponente es necesario poder modelar el estilo del juego del mismo.
+El modelado del oponente busca clasificar a nuestro oponente en base a su estilo estilo cognitivo (Toma deciciones de manera racional VS toma decisiones de manera intuitiva) asÃ­ como su comportamiento. Â¿Con quÃ© frecuencia el oponente cambia su estilo de juego? 
+Â¿CuÃ¡l es la frecuencia en la quÃ© miente? Â¿Tiene predominancia el comportamiento agresivo (Ejem.: Aumentar apuestas) o el comportamiento defensivo (Ejem.: Rechazar apuestas en contextos de malas cartas).
 
 * **Equilibrio de Nash**:
 Se llama equilibrio de Nash a  situaciones en las que las decisiones que ambos jugadores tomaron no pudiesen haber maximizado la utilidad para ambos de otra mejor alternativa.
 
 * **Valor esperado**:
-El valor esperado (EV) es el puntaje que podemos ganar al tomar una acción (Ejemplo: Ganar envido vs Perder envido) multiplicado por la probabilidad de ocurrencia de dicho desenlance.
+El valor esperado (EV) es el puntaje que podemos ganar al tomar una acciÃ³n (Ejemplo: Ganar envido vs Perder envido) multiplicado por la probabilidad de ocurrencia de dicho desenlance.
 
 * **Expectativa positiva**:
-EV+ , o expectativa positiva, es aquella acción que maxima la utilidad en función de su probabilidad de ocurrencia dados ciertas jugadas en contextos de información incompleta.
+EV+ , o expectativa positiva, es aquella acciÃ³n que maxima la utilidad en funciÃ³n de su probabilidad de ocurrencia dados ciertas jugadas en contextos de informaciÃ³n incompleta.
 
 * **Teorema fundamental del Poker.** (Aplica para el Truco)
-El teorema fundamental del poker, propuesto por David Sklansky, afirma que 'Siempre que un jugador juegue de manera distinta a la que lo habría hecho si conociera las cartas del rival, su rival saca ventaja; siempre que un jugador haga el mismo movimiento que haría si conociera las cartas del rival, él saca ventaja.'
+El teorema fundamental del poker, propuesto por David Sklansky, afirma que 'Siempre que un jugador juegue de manera distinta a la que lo habrÃ­a hecho si conociera las cartas del rival, su rival saca ventaja; siempre que un jugador haga el mismo movimiento que harÃ­a si conociera las cartas del rival, Ã©l saca ventaja.'
 
 * **Pozo del juego (Game's Equity)**:
-El pozo del juego es la cantidad de puntos en juego durante la partida. (Ejem. Si se canta truco y re truco serán 3).
+El pozo del juego es la cantidad de puntos en juego durante la partida. (Ejem. Si se canta truco y re truco serÃ¡n 3).
 
 * **Pozo del jugador (Player's equity)**:
 El pozo del jugador es el pozo del juego multiplicado por la probabilidad del jugador de ganar sobre el pozo del juego multiplicado por la probabilidad del jugador de perder.
 
 
 * **Valor de la mano (Hand's value)**:
-Es un puntaje obtenido en base a la posición de las cartas en función del truco y los tantos multiplicado por la probabilidad de obtenerlos.
+Es un puntaje obtenido en base a la posiciÃ³n de las cartas en funciÃ³n del truco y los tantos multiplicado por la probabilidad de obtenerlos.
 
 * **Combinatoria:**
 Es el estudio de la probabilidad de obtener diferentes manos en particular.
 
-* **Set de información (Information set):**
-Es la información que el agente conoce en cierto estado del juego.
+* **Set de informaciÃ³n (Information set):**
+Es la informaciÃ³n que el agente conoce en cierto estado del juego.
 
 * **Arbol de juego (Game Tree):**
-Es el esquema en el cuál se dan los posibles cursos de acción en el juego.
+Es el esquema en el cuÃ¡l se dan los posibles cursos de acciÃ³n en el juego.
 
 * **Persona:**
 Modelado de distintos perfiles de estrategia y/o personalidad de oponentes.
 
 * **Rango de manos:**
-Modelado deductivo del posible rango de manos que tiene nuestro oponente en función de la información disponible en el juego.
+Modelado deductivo del posible rango de manos que tiene nuestro oponente en funciÃ³n de la informaciÃ³n disponible en el juego.
 
 ## Modelado de cartas y manos.
 
@@ -101,10 +102,10 @@ Modelado deductivo del posible rango de manos que tiene nuestro oponente en func
 ### Cartas
 
 
-Vamos a usar lógica difusa para clasificar nuestras cartas:
+Vamos a usar lÃ³gica difusa para clasificar nuestras cartas:
 
 ####  P d/ derrotar a otra carta       
-| Expresión matematica       | Termino linguistico       | 
+| ExpresiÃ³n matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = 1      				 | Absoluta     |
 | A = 0.93      				 | Casi Absoluta      |
@@ -115,7 +116,7 @@ Vamos a usar lógica difusa para clasificar nuestras cartas:
 
 
 #### P d/ obtener carta      
-| Expresión matematica       | Termino linguistico       | 
+| ExpresiÃ³n matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = 0.277     				 | Alta      |
 | A = 0.146      				 | Media     |
@@ -164,9 +165,9 @@ Formula:
 
 `P = 40! / (40 - 3)! =  40! / 37! = (40 * 39 * 38) / 6 = 9,880`
 
-**59,280** son la cantidad de combinaciones posibles que tenemos. Es un número muy grande así que vamos a clasificar esas manos con el uso de lógica difusa.
+**59,280** son la cantidad de combinaciones posibles que tenemos. Es un nÃºmero muy grande asÃ­ que vamos a clasificar esas manos con el uso de lÃ³gica difusa.
 
-Si consideramos la diferentes combinación en función de si sos mano o pie las posibilidades son:
+Si consideramos la diferentes combinaciÃ³n en funciÃ³n de si sos mano o pie las posibilidades son:
 
 `9880 * 2 =` **19,760**
 
@@ -182,9 +183,9 @@ E = **Envido**
 m = 'Soy mano'
 p = 'Soy pie'
 
-| Expresión matematica       | Puntaje  |     Termino linguistico       |  P de ganar       | Termino linguistico       | 
+| ExpresiÃ³n matematica       | Puntaje  |     Termino linguistico       |  P de ganar       | Termino linguistico       | 
 | ------------- |:-------------:| ------------- | ------------- |:-------------:|
-| Em = 33      					| 21	 | Máximo     | 1.0 | Absoluta |
+| Em = 33      					| 21	 | MÃ¡ximo     | 1.0 | Absoluta |
 | Ep = 33      					| 21 |      | 0.95 | Casi Absoluta |
 | Em = (28, 32)      			|	(16,20) | Muy Alto    | 0.85~ | Muy Alta |
 | Ep = (28, 32)      			|	(16,20) |      | 0.80~ | |
@@ -223,7 +224,7 @@ Para el truco vamos darle un puntaje a cada carta de nuestra mano en base a su r
 
 Ejemplo: Si tengo un ancho de espada, es decir ranking 1 son 14 puntos (inversamente proporcional a la cantidad de casos)
 
-| Carta         | Ranking       |  Puntaje  | Expresión linguistica  |
+| Carta         | Ranking       |  Puntaje  | ExpresiÃ³n linguistica  |
 | ------------- |:-------------:|:-----:| :-----:|
 |   ![](images/espada/1.jpg "") 																				  | 1 | 14 | Muy Alto  |
 | ![](images/basto/1.jpg "")     																				 | 2     |   13 |   |
@@ -263,9 +264,9 @@ Entonces por ejemplo...
 Calculo de probabilidad de obtener mano:
 `p(A and B and C) =`
 
-La probabilidad de ganar truco se basa en la probabilidad conjunta de que ganes dos manos con tus mejores cartas. El valor minimo de tanto es lo minimo que podes ganar (Envido) multiplicado por la probabilidad de ganar esos puntos. Mismo con el truco. El valor máximo es en el envido el (envido,envido, real envido = 7 puntos) y en el truco (quiero vale 4 = 4), en ambos casos se multiplica por la probabilidad de obtener dichos puntos.
+La probabilidad de ganar truco se basa en la probabilidad conjunta de que ganes dos manos con tus mejores cartas. El valor minimo de tanto es lo minimo que podes ganar (Envido) multiplicado por la probabilidad de ganar esos puntos. Mismo con el truco. El valor mÃ¡ximo es en el envido el (envido,envido, real envido = 7 puntos) y en el truco (quiero vale 4 = 4), en ambos casos se multiplica por la probabilidad de obtener dichos puntos.
 
-Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano es la más valiosa. Si uno tiene en cuenta el valor (equity) de la mano, pareceria que tener buen envido es más valioso que tener puntos para el truco. **¿A vos qué te parece?**
+Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano es la mÃ¡s valiosa. Si uno tiene en cuenta el valor (equity) de la mano, pareceria que tener buen envido es mÃ¡s valioso que tener puntos para el truco. **Â¿A vos quÃ© te parece?**
 
   	
 
@@ -274,7 +275,7 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 
 ### Nivel operativo: Acciones (Actions)
 
-| Acción         | Denominación       |
+| AcciÃ³n         | DenominaciÃ³n       |
 | ------------- |:-------------:|
 | Tirar carta         | check       |
 | Irse al mazo         | fold       |
@@ -290,21 +291,21 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 | No Quiero (Envido)        | pass       |
 | No Quiero (Truco)       | fold       |
 
-### Nivel táctico: Jugadas (Plays)
+### Nivel tÃ¡ctico: Jugadas (Plays)
 
-| Jugada         | Descripción      |
+| Jugada         | DescripciÃ³n      |
 | ------------- |:-------------:|
 | Ir a la pesca         | Se tiene tanto o truco medio o alto, no se canta y se espera a que el contrincante cante para doblar la apuesta o aceptar.    |
 | Envido de Cobertura         | Se tiene buen tanto pero malas cartas para el  truco, el oponente canta truco en la primera mano, y se dice "el envido esta primero" para postergar el truco y obtener puntos del tanto antes de retirarse.     |
-| Mentira del tanto         | No se tienen buen tanto, se canta o se acepta y al momento de decir los puntos se miente por un nro más alto, esperando a que se termine la partida y el rival haya olvidado pedir que se muestren los tantos.      |
+| Mentira del tanto         | No se tienen buen tanto, se canta o se acepta y al momento de decir los puntos se miente por un nro mÃ¡s alto, esperando a que se termine la partida y el rival haya olvidado pedir que se muestren los tantos.      |
 | Trampa del truco        | Se tiene muy buenas cartas de envio y cartas medias/buenas de truco, en la primera mano cantamos truco esperando que nuestro oponente nos diga "el envido esta primero" de manera tal que podamos doblar la apuesta.      |
 | Achicar         | No se tiene buenas cartas (tanto o truco), el oponente canta primero y  dobla la apuesta buscando que el oponente la rechace.     |
-| Hacerlos entrar         | Se tiene buenas cartas, el contricante canta primero y se dobla la apuesta para buscar  más puntos.      |
+| Hacerlos entrar         | Se tiene buenas cartas, el contricante canta primero y se dobla la apuesta para buscar  mÃ¡s puntos.      |
 | Jugar callado        | No se tiene buenas cartas, y no se canta nada esperando que pase desapercibido para el oponente y tampoco lo haga.      |
 | Hacersela        | Apurar a un oponente para que juege cuando no es su turno, de manera que tire y queme su carta.       |
-| El error        | Estar hablando y simular que se te escapó la palabra truco o envido de manera que los oponentes quieran tomar provecho, acepten y/o doblen la apuesta esperando que nosotros no tengamos nada.       |
+| El error        | Estar hablando y simular que se te escapÃ³ la palabra truco o envido de manera que los oponentes quieran tomar provecho, acepten y/o doblen la apuesta esperando que nosotros no tengamos nada.       |
 | Falta envido de Cobertura      | El oponente esta a pocos puntos de ganar (menos de 3) , vos no tenes muchos tantos, te canta tanto o te dobla una apuesta. Para minimizar riesgos le cantas falta envido para reducir los puntos en juego.      |
-| Apriete        | Nuestro oponente esta a pocos puntos de perder, tenemos cartas y sabiendo que sí o sí debe aceptar, cantamos tanto o truco para acepte y pierda.    |
+| Apriete        | Nuestro oponente esta a pocos puntos de perder, tenemos cartas y sabiendo que sÃ­ o sÃ­ debe aceptar, cantamos tanto o truco para acepte y pierda.    |
 | Pausa falsa        | Nuestro oponente nos canta envido, nosotros tenemos cartas altas para el tanto pero en lugar de decir si inmeditamente esperamos un poco para hacer pensar al oponenete que estamos mintiendo   |
 | Intimidar        | No tenemos cartas buenas, el oponente nos canta envido o truco y nosotros casi instantaneamente decimos "quiero" o aumentamos apuesta, haciendo creer al oponente que estamos seguros de nuestras cartas. |
 
@@ -320,7 +321,7 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 
 `Mi = (0,1)`
 
-| Expresión matematica       | Termino linguistico       | 
+| ExpresiÃ³n matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = 1     				 | Absoluto      |
 | A = (0.80, 1)     				 | Muy alto     |
@@ -332,12 +333,12 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 
 
 
-**Formula indice de agresión:**
+**Formula indice de agresiÃ³n:**
 
 `Ai = (bets + raises) / (bets + raises + calls + checks + passes) * 100`
 `Mi = (0,1)`
 
-| Expresión matematica       | Termino linguistico       | 
+| ExpresiÃ³n matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = 1     				 | Absoluto      |
 | A = (0.80, 1)     				 | Muy alto     |
@@ -349,12 +350,12 @@ Basado en este sistema de puntaje seria bueno averiguar si realmente esta mano e
 
 
 **Formula velocidad de respuesta:**
-Tiempo promedio acumulado en responder ante la última acción del oponente
+Tiempo promedio acumulado en responder ante la Ãºltima acciÃ³n del oponente
 
 `Vr = ms`
 `Vr = (300,9000)`
 
-| Expresión matematica       | Termino linguistico       | 
+| ExpresiÃ³n matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = (300, 800)     				 | Muy alta     |
 | A = (800, 1500)     				 | Alta     |
@@ -371,7 +372,7 @@ Coeficiente de varianza = Cv
 `Vi = (0,1)`
 
 
-| Expresión matematica       | Termino linguistico       | 
+| ExpresiÃ³n matematica       | Termino linguistico       | 
 | ------------- |:-------------:|
 | A = 1     				 | Absoluto      |
 | A = (0.80, 1)     				 | Muy alto     |
@@ -381,7 +382,7 @@ Coeficiente de varianza = Cv
 | A = (0, 0.20)     				 | Muy Bajo     |
 | A = (0,1)     				 | Impredecible    |
 
-Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintió sobre oportunidades que no lo hizo) , (B) Indice de agresión (Oportunidades que aumentó apuesta sobre oportunidades que no lo hizo) y (C) Indice de variabilidad (Frecuencia en la cambia el patrón de estrategia en función del resto)
+Tiene en cuenta: (A) Indice de mentira (Oportunidades que mintiÃ³ sobre oportunidades que no lo hizo) , (B) Indice de agresiÃ³n (Oportunidades que aumentÃ³ apuesta sobre oportunidades que no lo hizo) y (C) Indice de variabilidad (Frecuencia en la cambia el patrÃ³n de estrategia en funciÃ³n del resto)
 
 
 
@@ -393,21 +394,21 @@ Podriamos decir que tenemos 3 espectros de comportamiento:
 2. Conservador <-> Ariesgado
 3. Estatico <-> Dinamico
 
-Un cuarto tipo se podría definir si tenemos en cuenta las pausas de juego:
-4. Crítico <-> Agil
+Un cuarto tipo se podrÃ­a definir si tenemos en cuenta las pausas de juego:
+4. CrÃ­tico <-> Agil
 
-#### Definición de Personas:
+#### DefiniciÃ³n de Personas:
 
-| Persona  | Descripción | Indice de mentira | Expresión Linguistica | Indice de agresión | Expresión Linguistica | Indice de variabilidad | Expresión Linguistica |  Tendencia a cantar con manos |
+| Persona  | DescripciÃ³n | Indice de mentira | ExpresiÃ³n Linguistica | Indice de agresiÃ³n | ExpresiÃ³n Linguistica | Indice de variabilidad | ExpresiÃ³n Linguistica |  Tendencia a cantar con manos |
 | ------------- |:-------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| Creativo  | Cambia sus tácticas con frecuencia, crea nuevas jugadas espontaneamente. | (0,1) | Impredecible | (0,1) | Impredecible | (0.80, 1)  | Muy Alta | Impredecible |
+| Creativo  | Cambia sus tÃ¡cticas con frecuencia, crea nuevas jugadas espontaneamente. | (0,1) | Impredecible | (0,1) | Impredecible | (0.80, 1)  | Muy Alta | Impredecible |
 | Temerario | Miente con mucha frecuencia, y suele arriesgar muchos puntos teniendo cartas pobres.  | (0.80, 1) | Muy alto | (0.80, 1) | Muy alto | (0.20, 0.40) | Bajo | Malas |
-| Tradicional | Miente seguido con cartas medias y malas, en alguna ocasión hace un gran aumento de apuestas con cartas malas.  | (0.60, 0.80) | Alto | (0.60, 0.80) | Alto | (0.20, 0.40) | Bajo | Medias o Malas |
+| Tradicional | Miente seguido con cartas medias y malas, en alguna ocasiÃ³n hace un gran aumento de apuestas con cartas malas.  | (0.60, 0.80) | Alto | (0.60, 0.80) | Alto | (0.20, 0.40) | Bajo | Medias o Malas |
 | Pescador | Canta cuando tiene cartas buenas y medias, aunque cada tanto realiza una mentira teniendo cartas malas. | (0.40, 0.60) | Medio | (0.40, 0.60) | Medio | (0.20, 0.40) | Bajo | Buenas o Medias|
 | Conservador | Canta cuando tiene buenas cartas. Suele decir que no quiere cuando tiene cartas malas. | (0.20, 0.40) | Bajo| (0.20, 0.40) | Bajo | (0.20, 0.40) | Bajo | Muy Buenas o Buenas |
-| Miedoso | Solo canta cuando tiene cartas excelentes. Prácticamente renuncia a todos los aumentos de apuesta. | 0 | Nulo| (0, 0.20) | Muy Bajo | (0.20, 0.40) | Bajo | Muy Buenas |
+| Miedoso | Solo canta cuando tiene cartas excelentes. PrÃ¡cticamente renuncia a todos los aumentos de apuesta. | 0 | Nulo| (0, 0.20) | Muy Bajo | (0.20, 0.40) | Bajo | Muy Buenas |
 
-**¿Se les ocurren otras clasificaciones?**
+**Â¿Se les ocurren otras clasificaciones?**
 
 
 #### Otros indicadores de juego:
@@ -417,7 +418,7 @@ Un cuarto tipo se podría definir si tenemos en cuenta las pausas de juego:
 * porcentaje de 4Bet: `(4bet raises / total raises) * 100` Esta es la cantidad de veces que el jugador aumenta la apuesta ante una apuesta 3bet del oponente. Ejem: 'Envido, Envido, Real Envido, Falta envido'
 
 * ratio de aperturas: `ruedas.isMano ='true' + call(Envido) / ruedas`
-Este indicador nos dice cuanto es la probabilidad que nuestro oponente cante envido en primera mano. Es un indicador que nos puede ayudar a detectar ciertas tácticas como la pesca de tantos. O la importancia que le asigna el oponente a los tantos.
+Este indicador nos dice cuanto es la probabilidad que nuestro oponente cante envido en primera mano. Es un indicador que nos puede ayudar a detectar ciertas tÃ¡cticas como la pesca de tantos. O la importancia que le asigna el oponente a los tantos.
 
 * suerte: `manos altas, muy altas / total manos`
 Este indicador nos dice cuantas manos bravas tuvo nuestro oponente en base todas sus manos. Nos ayuda a identificar y estimar si la performance del oponente se debe a una buena estrategia o simplemente a su suerte.
@@ -450,20 +451,20 @@ La rueda se subdivide en 3 rounds. Y tiene dos momentos:
 1. Momento Pre-Envido (1er Round)
 2. Momento Post-Envido (2do y 3er Round)
 
-## Próximos pasos en el analísis
+## PrÃ³ximos pasos en el analÃ­sis
 
 * Encontrar mejores formas de clasificar valor de las manos.
-* Hacer una simulación para detectar el top de manos con más valor.
-* Calcular probabilidad de ganar en función de la clasificación de la mano.
-* Calcular probabilidad de las manos.¨
+* Hacer una simulaciÃ³n para detectar el top de manos con mÃ¡s valor.
+* Calcular probabilidad de ganar en funciÃ³n de la clasificaciÃ³n de la mano.
+* Calcular probabilidad de las manos.Â¨
 * Modelar estados del juego
 * Clasificar jugadas (plays)
 * Calcular valor esperado de jugadas y acciones segun diferentes estados.
 
 
-## ¿Y vos, cómo encararias el desarrollo de un agente de aprendizaje reforzado para el truco Argentino?
+## Â¿Y vos, cÃ³mo encararias el desarrollo de un agente de aprendizaje reforzado para el truco Argentino?
 
-¡No dudes en participar de este proyecto con tus ideas!
+Â¡No dudes en participar de este proyecto con tus ideas!
 
 ## Recursos
 
@@ -472,12 +473,12 @@ La rueda se subdivide en 3 rounds. Y tiene dos momentos:
 * DeepStackAI Youtube Channel. De https://www.youtube.com/channel/UC4vSx3bbs8dbaHl2tkzU8Nw
 * The State of Techniques for Solving Large Imperfect-Information Games, Including Poker. Microsoft Research (2016). De https://www.youtube.com/watch?v=QgCxCeoW5JI
 
-## Referencias y Bibliografía adicional
+## Referencias y BibliografÃ­a adicional
 
 * David Sklansky (1987). The Theory of Poker. Two Plus Two Publications. ISBN 1-880685-00-0.
 * Zadeh, L. A. (1965). Fuzzy sets. Information and control, 8(3), 338-353
 
-### Más literatura cientifica:
+### MÃ¡s literatura cientifica:
 
 * Billings, D., Schaeffer, J., & Szafron, D. (1999). Using probabilistic knowledge and simulation to play poker. In In AAAI National Conference. http://www.aaai.org/Papers/AAAI/1999/AAAI99-099.pdf
 * Barone, L., & While, L. (2000, July). Adaptive learning for poker. In Proceedings of the 2nd Annual Conference on Genetic and Evolutionary Computation (pp. 566-573). Morgan Kaufmann Publishers Inc.. http://www.cs.bham.ac.uk/~wbl/biblio/gecco2000/RW179.pdf
