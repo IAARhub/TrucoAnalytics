@@ -165,11 +165,19 @@ Formula:
 
 `P = 40! / (40 - 3)! =  40! / 37! = (40 * 39 * 38) / 6 = 9,880`
 
-**59,280** son la cantidad de combinaciones posibles que tenemos. Es un número muy grande así que vamos a clasificar esas manos con el uso de lógica difusa.
+**9,880** son la cantidad de combinaciones posibles que tenemos. Es un número muy grande así que vamos a clasificar esas manos con el uso de lógica difusa.
 
 Si consideramos la diferentes combinación en función de si sos mano o pie las posibilidades son:
 
 `9880 * 2 =` **19,760**
+
+### Combinatoria de manos 1v1
+El primer jugador puede tener 9,880 manos distintas.
+El segundo jugador puede tener entonces:
+`P = 37! / (37 - 3)! =  37! / 34! = (37 * 36 * 35) / 6 = 7,770`
+
+**7,770** son la cantidad de combinaciones posibles de la mano del segundo jugador.
+Esto da un total de 9,880 * 7,770 = **76.767.600** manos diferentes al jugar 1v1.
 
 Vamos a clasificar la mano por:
 
@@ -203,7 +211,34 @@ Casos posibles =
 `[33,32,31,30,29,28,27,26,25,24,23,22,21,20,7,6,5,4,3,2,1]`
 
 
-Osea 21 casos posibles. Ejem.: Si tengo 33 pero no soy mano entonces mis probabilidades de ganar son 20/21 = 0.95
+|Puntaje|Frecuencia|
+| ----- |:--------:|
+|0 puntos  |112|
+|1 puntos  |148|
+|2 puntos  |244|
+|3 puntos  |364|
+|4 puntos  |504|
+|5 puntos  |676|
+|6 puntos  |868|
+|7 puntos  |1084|
+|20 puntos |364|
+|21 puntos |372|
+|22 puntos |372|
+|23 puntos |504|
+|24 puntos |504|
+|25 puntos |640|
+|26 puntos |640|
+|27 puntos |780|
+|28 puntos |408|
+|29 puntos |420|
+|30 puntos |284|
+|31 puntos |292|
+|32 puntos |148|
+|33 puntos |152|
+|total   |9,880|
+
+Si tengo 32 y soy mano entonces mis probabilidades de ganar son que el rival NO tenga 33. (9,880-152)/9,880 = 0.9846 (*)
+*Nota: en realidad son mas, dado que para tener 32 debo tener un 7, lo cual disminuye los 152 casos del rival.
 
 Para los que sean intervalos, calculamos para cada caso y luego computamos promedio.
 
@@ -212,8 +247,8 @@ Ejem:
 Em = (28, 32)
 Ep = (28, 32)
 
-`P(g)Em = (0.95 + 0.90 + 0.85 + 0.81 + 0.76) / 5 = 0.85 
-P(g)Ep = (0.90 + 0.85 + 0.81 + 0.76 + 0.71) / 5 = 0.80`
+`P(g)Em = recalcular 
+P(g)Ep = recalcular`
 
 
 
