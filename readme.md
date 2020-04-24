@@ -3,8 +3,8 @@
 
 ![](http://www.tornquistdistrital.com.ar/wp-content/uploads/2017/09/Trucoo.jpg "") 
 
-[DESAFIO] **¿Cómo hacer que una computadora juegue mejor que un humano al truco?**
-¿Podemos crear una IA para el truco?
+[DESAFIO] **¿Cómo podríamos que hacer que una computadora juegue mejor que un humano al truco?**
+¿Podríamos crear una IA para el truco?
 
 **Resumen:** El Truco es un juego de cartas Argentino popularmente jugado en el todo el país y el cono sur. 
 Es un juego de estrategia competitivo basado en turnos, de suma cero, estados finitos e información incompleta, lo cúal quiere decir que los jugadores basaran sus estrategias en base a especulaciones en cuanto a las cartas de los demas.
