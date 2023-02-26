@@ -277,7 +277,7 @@ Es decir, la probabilidad de tener dos o más cartas de espada en nuestra mano, 
 
 **P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = P(XEspada >= 2) + P(XBasto >= 2) + P(XOro >= 2) + P(XCopa >= 2)**
 
-**P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.14879 * 4**
+**P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.14879 + 0.14879 + 0.14879 + 0.14879**
 
 **P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.14879 * 4**
 
