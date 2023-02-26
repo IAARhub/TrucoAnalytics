@@ -251,6 +251,36 @@ Ep = (28, 32)
 P(g)Ep = recalcular`
 
 
+### ¿Cómo cálcular probabilidad de envido?
+
+En una partida de truco tal como en muchos juegos de cartas, se reparte una cierta cantidad determinada de cartas a cada jugador *sin reposición* de las mismas. Dada esa dinámica, si deseamos cálcular la probabilidad de obtener ciertas cartas (éxito) dentro de una muestra en particular (mano), la distribución apropiada es la hipergeométrica (https://es.wikipedia.org/wiki/Distribuci%C3%B3n_hipergeom%C3%A9trica).
+
+![image](https://user-images.githubusercontent.com/16574952/221434856-332910c9-1026-4fea-81ba-551874243ff9.png)
+
+Entonces podemos definir a la variable aleatoria X como la cantidad de cartas de palo en particular de mi mano:
+**X∼Hipergeometrica (N = 40, M = 10, n = 3)**
+
+Es decir, sea X una variable aleatoria de distribución de probabilidad hipergeometrica con una población de 40 cartas (mazo), unas 10 cartas de de un palo (por ejem, espada) y una muestra de 3 cartas (mano). Queremos saber...
+
+**P(X>=2) = ?**
+
+En otras palabras, la probabilidad que X sea mayor 2 (que el número de cartas de un palo de mi mazo sea dos o tres).
+
+
+Aplicando la formula de distribución hipergeometrica, eso da: 
+
+**P(X ≥ 2): 0.14879**
+
+Ahora bien, a nosotros nos interesa cálcular la probabilidad que nos toqué dos o tres cartas del mismo palo, no solo de un palo en particular (espada como pusimos en el ejemplo).
+
+Es decir, la probabilidad de tener dos o más cartas de espada en nuestra mano, o bien dos o más cartas de basto, o bien dos o más cartas de oro, o bien dos o más cartas de copa, siendo estos eventos mutuamente excluyentes.
+
+**P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = P(XEspada >= 2) + P(XBasto >= 2) + P(XOro >= 2) + P(XCopa >= 2)** 
+**P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.14879 * 4**
+**P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.14879 * 4**
+**P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.59516**
+**P(Envido) = 0.59516**
+
 
 Vamos por su valor en el **truco**:
 
