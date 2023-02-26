@@ -275,10 +275,14 @@ Ahora bien, a nosotros nos interesa cálcular la probabilidad que nos toqué dos
 
 Es decir, la probabilidad de tener dos o más cartas de espada en nuestra mano, o bien dos o más cartas de basto, o bien dos o más cartas de oro, o bien dos o más cartas de copa, siendo estos eventos mutuamente excluyentes.
 
-**P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = P(XEspada >= 2) + P(XBasto >= 2) + P(XOro >= 2) + P(XCopa >= 2)** 
+**P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = P(XEspada >= 2) + P(XBasto >= 2) + P(XOro >= 2) + P(XCopa >= 2)**
+
 **P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.14879 * 4**
+
 **P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.14879 * 4**
+
 **P(XEspada >= 2) ∪ P(XBasto >= 2) ∪ P(XOro >= 2) ∪ P(XCopa >= 2) = 0.59516**
+
 **P(Envido) = 0.59516**
 
 
