@@ -122,6 +122,47 @@ Vamos a usar lógica difusa para clasificar nuestras cartas:
 | A = 0.146      				 | Media     |
 | A = 0.075      				 | Baja    |
 
+### ¿Cómo obtener la probabilidad de obtener una carta?
+
+Si tengo un mazo de cartas españolas de 40 cartas y deseo obtener la probabilidad de obtener una carta determinada sacando una carta del mazo, simplemente debó contar los casos favorables sobre el total de los casos.
+
+Sea evento **A** = Sacar ancho de espada (Hay un caso éxitoso sobre 40 casos posibles).
+
+**P(A) = 1 / 40 = 0.025**
+
+Sea evento **B** = Sacar algún 4. (Hay 4 casos posibles sobre 40 cartas totales).
+
+**P(B) = 4 / 40 = 0.025**
+
+Ahora bien, este cálculo solo nos esta indicando la probabilidad de sacar alguna o algunas cartas en una sola tirada con el mazo completo. No obstante, en el truco, se reparten 3 cartas a cada jugador. Al repartir esas cartas, estas no se reponen en el mazo, si no que pertenecen a la mano de dicho jugador.
+
+Entonces, si deseamos obtener la probabilidad de obtener una carta o tipo de cartas en particular en mi mano, será necesario, pensar en una distribución de **probabilidad hipergeometrica**. (https://es.wikipedia.org/wiki/Distribuci%C3%B3n_hipergeom%C3%A9trica).
+
+![image](https://user-images.githubusercontent.com/16574952/221434856-332910c9-1026-4fea-81ba-551874243ff9.png)
+
+Dado una población **N** de **40** cartas, donde tenemos **1** solo caso éxitoso **M** en nuestra población (hay un solo ancho de espada en un mazo de 40 cartas españolas), y tengo un tamaño muestral **n** de **3** cartas (una mano tiene 3 cartas), deseo saber la probabilidad de qué exista un **1** caso éxitoso **x** en mi muestra n.
+
+Es decir:
+
+**X∼Hipergeometrica (N = 40, M = 1, n = 1)**
+
+Probabilidad de que me toqué el ancho en mi mano:
+
+**P(X=1)** = **0.07500**
+
+Por su parte, si quisieramos cálcular la probabilidad que nos toque algún cuatro, se pensaría de la siguiente manera:
+
+Dado una población **N** de **40** cartas, donde tenemos **4** solo caso éxitoso **M** en nuestra población N (tenemos un cuatro de cada palo en un mazo de 40 cartas españolas), y tengo un tamaño muestral **n** de **3** cartas (una mano tiene 3 cartas), deseo saber la probabilidad de qué exista un **1** caso éxitoso **x** (qué me toque algún cuatro) en mi muestra n.
+
+Es decir:
+
+**X∼Hipergeometrica (N = 40, M = 4, n = 1)**
+
+Probabilidad de que me toqué el ancho en mi mano:
+
+**P(X=1)** = **0.25506**
+
+
 Vamos a rankear las cartas:
 
 | Carta         | Ranking       | P d/ derrotar a otra carta  | P d/ obtener carta  |
@@ -130,36 +171,25 @@ Vamos a rankear las cartas:
 | ![](images/basto/1.jpg "")     																				 | 2     |   0.97 | 0.075 |
 | ![](images/espada/7.jpg "")  																					   | 3      |    0.95 | 0.075 |
 | ![](images/oro/7.jpg "")   																					  | 4      |    0.92 | 0.075 |
-| ![](images/espada/3.jpg "") ![](images/basto/3.jpg "") ![](images/oro/3.jpg "") ![](images/copa/3.jpg "")       | 5      |    0.82 | 0.277|
-| ![](images/espada/2.jpg "") ![](images/basto/2.jpg "") ![](images/oro/2.jpg "") ![](images/copa/2.jpg "")       | 6      |    0.72 | 0.277 |
-| ![](images/oro/1.jpg "") ![](images/copa/1.jpg "")     														  | 7      |    0.66 | 0.146 |
-| ![](images/espada/12.jpg "") ![](images/basto/12.jpg "") ![](images/oro/12.jpg "") ![](images/copa/12.jpg "")       | 8      |    0.56 | 0.277 |
-| ![](images/espada/11.jpg "") ![](images/basto/11.jpg "") ![](images/oro/11.jpg "") ![](images/copa/11.jpg "")       | 9      |    0.46 | 0.277 |
-| ![](images/espada/10.jpg "") ![](images/basto/10.jpg "") ![](images/oro/10.jpg "") ![](images/copa/10.jpg "")       | 10      |    0.36 | 0.277 |
-|  ![](images/basto/7.jpg "")  ![](images/copa/7.jpg "")       															| 11      |    0.31 | 0.146 |
-| ![](images/espada/6.jpg "") ![](images/basto/6.jpg "") ![](images/oro/6.jpg "") ![](images/copa/6.jpg "")       | 12      |    0.21 | 0.277 |
-| ![](images/espada/5.jpg "") ![](images/basto/5.jpg "") ![](images/oro/5.jpg "") ![](images/copa/5.jpg "")       | 13      |    0.10 | 0.277 |
-| ![](images/espada/4.jpg "") ![](images/basto/4.jpg "") ![](images/oro/4.jpg "") ![](images/copa/4.jpg "")       | 14      |    0 | 0.277 |
+| ![](images/espada/3.jpg "") ![](images/basto/3.jpg "") ![](images/oro/3.jpg "") ![](images/copa/3.jpg "")       | 5      |    0.82 | 0.255|
+| ![](images/espada/2.jpg "") ![](images/basto/2.jpg "") ![](images/oro/2.jpg "") ![](images/copa/2.jpg "")       | 6      |    0.72 | 0.255 |
+| ![](images/oro/1.jpg "") ![](images/copa/1.jpg "")     														  | 7      |    0.66 | 0.142 |
+| ![](images/espada/12.jpg "") ![](images/basto/12.jpg "") ![](images/oro/12.jpg "") ![](images/copa/12.jpg "")       | 8      |    0.56 | 0.255 |
+| ![](images/espada/11.jpg "") ![](images/basto/11.jpg "") ![](images/oro/11.jpg "") ![](images/copa/11.jpg "")       | 9      |    0.46 | 0.255 |
+| ![](images/espada/10.jpg "") ![](images/basto/10.jpg "") ![](images/oro/10.jpg "") ![](images/copa/10.jpg "")       | 10      |    0.36 | 0.255 |
+|  ![](images/basto/7.jpg "")  ![](images/copa/7.jpg "")       															| 11      |    0.31 | 0.142 |
+| ![](images/espada/6.jpg "") ![](images/basto/6.jpg "") ![](images/oro/6.jpg "") ![](images/copa/6.jpg "")       | 12      |    0.21 | 0.255 |
+| ![](images/espada/5.jpg "") ![](images/basto/5.jpg "") ![](images/oro/5.jpg "") ![](images/copa/5.jpg "")       | 13      |    0.10 | 0.255 |
+| ![](images/espada/4.jpg "") ![](images/basto/4.jpg "") ![](images/oro/4.jpg "") ![](images/copa/4.jpg "")       | 14      |    0 | 0.255 |
 
 Formula de p/d ganar:
 
 `casos en los que gana la carta / total de casos.`
 
-Fórmula de p d/ obtener carta en una mano:
-Manos con la carta : `C(casos,2) = n`
-
-Tener un 7 de basto o un 7 de copa:
-`p(A or B) =`
-
-Tener algun 4:
-`p(A or B or C or D) =`
-
-
-Cantidad de manos : `9,880`
-
-
 
 ### Combinatoria de manos
+
+Ahora, ¿cuántas son las manos son posibles de obtener?
 
 Fórmula: 
 
@@ -253,9 +283,7 @@ P(g)Ep = recalcular`
 
 ### ¿Cómo cálcular probabilidad de envido?
 
-En una partida de truco tal como en muchos juegos de cartas, se reparte una cierta cantidad determinada de cartas a cada jugador *sin reposición* de las mismas. Dada esa dinámica, si deseamos cálcular la probabilidad de obtener ciertas cartas (éxito) dentro de una muestra en particular (mano), la distribución apropiada es la hipergeométrica (https://es.wikipedia.org/wiki/Distribuci%C3%B3n_hipergeom%C3%A9trica).
-
-![image](https://user-images.githubusercontent.com/16574952/221434856-332910c9-1026-4fea-81ba-551874243ff9.png)
+En una partida de truco tal como en muchos juegos de cartas, se reparte una cierta cantidad determinada de cartas a cada jugador *sin reposición* de las mismas. Dada esa dinámica, si deseamos cálcular la probabilidad de obtener ciertas cartas (éxito) dentro de una muestra en particular (mano), como dijimos anteriormente la distribución apropiada es la hipergeométrica.
 
 Entonces podemos definir a la variable aleatoria X como la cantidad de cartas de palo en particular de mi mano:
 **X∼Hipergeometrica (N = 40, M = 10, n = 3)**
