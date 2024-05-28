@@ -1,43 +1,63 @@
+import pytrucoengine as pte
 import numpy as np
 import random
 from collections import defaultdict
 
-# Definición del entorno del Truco Argentino
+# Definición del entorno del Truco usando PyTrucoEngine
 class TrucoEnv:
     def __init__(self):
+        self.game = pte.Game()
         self.reset()
 
     def reset(self):
-        self.state = self.init_state()
+        self.game.reset()
+        self.state = self.get_state()
         return self.state
 
-    def init_state(self):
-        # Implementa la inicialización del estado del juego
-        # Por ejemplo, la mano inicial del jugador y del oponente
+    def get_state(self):
+        # Retorna una representación del estado actual del juego
+        player_hand = self.game.players[0].hand
+        opponent_hand = self.game.players[1].hand
         return {
-            'player_hand': self.deal_hand(),
-            'opponent_hand': self.deal_hand(),
-            'current_round': 0
+            'player_hand': [card.rank for card in player_hand],
+            'opponent_hand': [card.rank for card in opponent_hand],  # Este es solo un ejemplo, en un juego real no conocerías la mano del oponente
+            'current_round': self.game.rounds
         }
 
-    def deal_hand(self):
-        # Reparte una mano de tres cartas al azar
-        deck = list(range(1, 41))  # Supongamos que tenemos 40 cartas
-        return random.sample(deck, 3)
-
     def step(self, action):
-        # Implementa la lógica para tomar una acción y actualizar el estado del juego
-        # Aquí action puede ser 'play_card', 'envido', 'truco', etc.
-        reward = 0
+        # Toma una acción en el juego
         done = False
+        reward = 0
+        if action.startswith('play_card_'):
+            card_index = int(action.split('_')[-1])
+            card = self.game.players[0].hand[card_index]
+            self.game.play_card(card)
 
-        # Actualiza el estado según la acción tomada
+        # Actualizar el estado y calcular la recompensa
+        self.state = self.get_state()
+        if self.game.is_over():
+            done = True
+            reward = self.calculate_reward()
 
         return self.state, reward, done, {}
 
+    def calculate_reward(self):
+        # Calcula la recompensa basada en el estado del juego
+        if self.game.winner() == 0:
+            return 1
+        elif self.game.winner() == 1:
+            return -1
+        else:
+            return 0
+
     def get_legal_actions(self):
         # Retorna una lista de acciones legales en el estado actual
-        return ['play_card_1', 'play_card_2', 'play_card_3', 'envido', 'truco']
+        actions = [f'play_card_{i}' for i in range(len(self.game.players[0].hand))]
+        if self.game.can_envido(0):
+            actions.append('envido')
+        if self.game.can_truco(0):
+            actions.append('truco')
+        return actions
 
 # Implementación del agente de Q-Learning
 class QLearningAgent:
