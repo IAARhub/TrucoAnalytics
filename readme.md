@@ -208,6 +208,45 @@ Formula de p/d ganar:
 
 `casos en los que gana la carta / total de casos.`
 
+```python
+def ranking_card():
+    """
+    4s --> 0
+    Ancho de Espada --> 13
+    """
+    if numero == 4:
+        return 14
+    elif numero == 5:
+        return 13
+    elif numero == 6:
+        return 12
+    elif numero == 7:
+        if palo in ["basto", "copa"]:
+            return 11
+        elif palo == "oro":
+            return 4
+        else:  # espada
+            return 3
+    elif numero == 10:
+        return 10
+    elif numero == 11:
+        return 9
+    elif number == 12:
+        return 8
+    elif numero == 1:
+        if stick in ["oro", "copa"]:
+            return 7
+        elif stick == "basto":
+            return 2
+        else:  # espada
+            return 1
+    elif numero == 2:
+        return 6
+    elif numero == 3:
+        return 5
+    else:
+        return 1
+```
 
 ### Combinatoria de manos
 
