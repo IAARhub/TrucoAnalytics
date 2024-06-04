@@ -101,6 +101,28 @@ Modelado deductivo del posible rango de manos que tiene nuestro oponente en func
 
 ### Cartas
 
+Cartas del truco:
+
+```python
+# Modelo de carta
+def crear_carta(numero, palo):
+    return {"numero": numero, "palo": palo}
+
+# Definición de los palos
+palos = ["Espada", "Basto", "Oro", "Copa"]
+
+# Creación del array de cartas
+mazo = []
+for palo in palos:
+    for numero in range(1, 8):
+        mazo.append(crear_carta(numero, palo))
+    for numero in range(10, 13):
+        mazo.append(crear_carta(numero, palo))
+
+# Mostrar el mazo completo
+for carta in mazo:
+    print(carta)
+```
 
 Vamos a usar lógica difusa para clasificar nuestras cartas:
 
@@ -200,6 +222,40 @@ Fórmula:
 Sí consideramos la diferentes combinación en función de si sos mano o pie las posibilidades son:
 
 `9880 * 2 =` **19,760**
+
+```python
+from itertools import combinations
+
+# Modelo de carta
+def crear_carta(numero, palo):
+    return {"numero": numero, "palo": palo}
+
+# Crear el mazo
+def crear_mazo():
+    palos = ["Espada", "Basto", "Oro", "Copa"]
+    mazo = []
+    for palo in palos:
+        for numero in range(1, 8):
+            mazo.append(crear_carta(numero, palo))
+        for numero in range(10, 13):
+            mazo.append(crear_carta(numero, palo))
+    return mazo
+
+# Generar todas las combinaciones posibles de manos de 3 cartas
+def generar_todas_las_manos(mazo):
+    return list(combinations(mazo, 3))
+
+# Crear el mazo
+mazo = crear_mazo()
+
+# Generar todas las manos posibles
+todas_las_manos = generar_todas_las_manos(mazo)
+
+# Mostrar algunas de las manos generadas
+for mano in todas_las_manos[:5]:  # Mostrar solo las primeras 5 manos para ejemplo
+    print(mano)
+```
+
 
 ### Combinatoria de manos 1v1
 El primer jugador puede tener 9,880 manos distintas.
@@ -388,6 +444,23 @@ Basado en este sistema de puntaje sería bueno averiguar si realmente esta mano 
 | No Quiero (Envido)        | pass       |
 | No Quiero (Truco)       | fold       |
 
+```python
+# Mapeo de acciones a denominaciones comunes en juegos de cartas y apuestas
+acciones = {
+    "check": "Tirar carta",
+    "fold": "Irse al mazo",
+    "bet": ["Envido", "Truco"],
+    "raise": ["Envido Envido", "Real envido", "Envido Real envido", "Re Truco", "Vale cuatro"],
+    "raise && allIn": "Falta envido",
+    "call": "Quiero",
+    "pass": "No Quiero (Envido)",
+    "fold (truco)": "No Quiero (Truco)"
+}
+
+# Inverso del mapeo para facilitar la conversión de acciones a términos del truco
+acciones_inversas = {v: k for k, vs in acciones.items() for v in (vs if isinstance(vs, list) else [vs])}
+```
+
 ### Nivel táctico: Jugadas (Plays)
 
 | Jugada         | Descripción      |
@@ -523,6 +596,7 @@ Este indicador nos dice cuantas manos bravas tuvo nuestro oponente en base todas
 
 #### Indicadores de performance:
 
+* ELO
 * Ratio de Partidas ganadas / Partidas jugadas.
 * Promedio de puntos por rueda: score / rounds 
 * Promedio de puntos por rueda con cartas altas:  `(score / rounds ) when manos altas, muy altas`
@@ -548,6 +622,57 @@ La rueda se subdivide en 3 rounds. Y tiene dos momentos:
 1. Momento Pre-Envido (1er Round)
 2. Momento Post-Envido (2do y 3er Round)
 
+## Definiendo estados
+
+Para definir estados del juego debemos considerar:
+
+### Componentes de un Estado en el Truco Argentino
+1. Cartas en Mano: Las cartas que cada jugador tiene en su mano.
+2. Cartas Jugadas: Las cartas que han sido jugadas en la mesa hasta el momento.
+3. Puntos: Los puntos acumulados por cada equipo.
+4. Ronda Actual: Información sobre la ronda actual (primera, segunda, tercera).
+5. Turno Actual: Información sobre quién es el jugador que tiene el turno.
+6. Cantos y Respuestas: Los cantos de truco, retruco, vale cuatro, envido, real envido, falta envido y las respuestas a estos cantos.
+7. Truco Cantado: Si el truco ha sido cantado y su nivel actual.
+8. Envido Cantado: Si el envido ha sido cantado y su nivel actual.
+9. Mano o Pie: Si el jugador es mano (primer jugador en jugar en la ronda) o pie.
+
+```python
+# Clase que define el estado del juego de Truco
+class EstadoTruco:
+    def __init__(self, mano_jugador, mano_oponente, cartas_jugadas, puntos_jugador, puntos_oponente, numero_ronda, turno_actual, nivel_truco, nivel_envido, es_mano):
+        self.mano_jugador = mano_jugador  # Cartas en la mano del jugador
+        self.mano_oponente = mano_oponente  # Cartas en la mano del oponente (normalmente desconocido, pero puede ser conocido en simulación)
+        self.cartas_jugadas = cartas_jugadas  # Cartas jugadas en la mesa
+        self.puntos_jugador = puntos_jugador  # Puntos del jugador
+        self.puntos_oponente = puntos_oponente  # Puntos del oponente
+        self.numero_ronda = numero_ronda  # Número de la ronda actual (1, 2, 3)
+        self.turno_actual = turno_actual  # Jugador que tiene el turno
+        self.nivel_truco = nivel_truco  # Nivel actual del truco (0: no cantado, 1: truco, 2: retruco, 3: vale cuatro)
+        self.nivel_envido = nivel_envido  # Nivel actual del envido (0: no cantado, 1: envido, 2: real envido, 3: falta envido)
+        self.es_mano = es_mano  # Si el jugador es mano (True) o no (False)
+```
+
+Ahora para desarrollar un agente de aprendizaje reforzado necesitaremos convertir estos estados a valores numericos.
+
+```python
+# Función para convertir el estado del juego en un formato numérico
+def estado_a_numerico(estado):
+    # Ejemplo de codificación numérica para simplificación
+    mapeo_cartas = {"1 de Espada": 1, "7 de Oro": 2, "6 de Copa": 3, "3 de Basto": 4, "2 de Oro": 5}
+    vector_estado = [
+        sum([mapeo_cartas[carta] for carta en estado.mano_jugador]),  # Representación simple de las cartas en mano
+        estado.puntos_jugador,
+        estado.puntos_oponente,
+        estado.numero_ronda,
+        estado.turno_actual,
+        estado.nivel_truco,
+        estado.nivel_envido,
+        int(estado.es_mano)
+    ]
+    return np.array(vector_estado)
+```
+
 ## Próximos pasos en el análisis
 
 * Encontrar mejores formas de clasificar valor de las manos.
@@ -555,7 +680,6 @@ La rueda se subdivide en 3 rounds. Y tiene dos momentos:
 * Calcular probabilidad de ganar en función de la clasificación de la mano.
 * Calcular probabilidad de las manos.¨
 * Modelar estados del juego
-* Clasificar jugadas (plays)
 * Calcular valor esperado de jugadas y acciones segun diferentes estados.
 
 
