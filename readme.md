@@ -61,13 +61,39 @@ El modelado del oponente busca clasificar a nuestro oponente en base a su estilo
 Se llama equilibrio de Nash a  situaciones en las que las decisiones que ambos jugadores tomaron no pudiesen haber maximizado la utilidad para ambos de otra mejor alternativa.
 
 * **Valor esperado**:
-El valor esperado (EV) es el puntaje que podemos ganar al tomar una acción (Ejemplo: Ganar envido vs Perder envido) multiplicado por la probabilidad de ocurrencia de dicho desenlance.
+El Valor Esperado (VE) o Expected Value (VE) en el truco se refiere a la expectativa promedio de puntos que un jugador o equipo puede ganar o perder como resultado de una acción específica, considerando todas las posibles situaciones y sus probabilidades asociadas.
+
+EV=(p1×r1)+(p2×r2)+...+(pn×rn)
+
+donde:
+
+� p es la probabilidad de un resultado específico.
+� r es el resultado asociado con esa probabilidad (ganancia o pérdida de puntos).
+� n es el número total de resultados posibles.
 
 * **Expectativa positiva**:
-EV+ , o expectativa positiva, es aquella acción que maxima la utilidad en función de su probabilidad de ocurrencia dados ciertas jugadas en contextos de información incompleta.
+Una acción tiene expectativa positiva (VE+) o EV+ (Expected Value Positive) cuando el EV es positivo, es decir, cuando la expectativa promedio es ganar más puntos de los que se pierden. Tomar decisiones con EV+ a lo largo del juego ayuda a maximizar las ganancias a largo plazo.
+
+* **Expectativa negativa **:
+
+En el truco argentino, el término EV- (Expected Value Negative) se refiere a una situación en la que el valor esperado (EV) de una acción o decisión es negativo. Esto significa que, en promedio y a largo plazo, esa acción resultará en una pérdida neta de puntos. Tomar decisiones con EV- tiende a ser perjudicial para el jugador o equipo, ya que conduce a pérdidas acumuladas con el tiempo.
 
 * **Teorema fundamental del Poker.** (Aplica para el Truco)
-El teorema fundamental del poker, propuesto por David Sklansky, afirma que 'Siempre que un jugador juegue de manera distinta a la que lo habría hecho si conociera las cartas del rival, su rival saca ventaja; siempre que un jugador haga el mismo movimiento que haría si conociera las cartas del rival, él saca ventaja.'
+El Teorema Fundamental del Poker, formulado por David Sklansky, establece que cada vez que juegas una mano de manera diferente a como lo habrías hecho si pudieras ver las cartas de tu oponente, él gana; y cada vez que juegas tu mano de la misma manera que lo habrías hecho si pudieras ver sus cartas, tú ganas. Aunque el truco argentino y el poker son juegos diferentes, el teorema puede aplicarse de manera similar para mejorar la toma de decisiones estratégicas en el truco. En el truco, como en el poker, se toman decisiones basadas en información imperfecta. No puedes ver las cartas de tu oponente, pero puedes hacer inferencias basadas en sus acciones y en la información disponible (tus cartas, las cartas jugadas, las apuestas, etc.).
+
+Componentes del Teorema en el Truco
+Lectura del Oponente:
+
+Acciones del Oponente: Observar y analizar las acciones del oponente (por ejemplo, si canta envido, truco, o re truco) para inferir la fuerza de sus cartas.
+Patrones de Juego: Identificar patrones de juego que puedan indicar una mano fuerte o débil.
+Juego Óptimo Basado en Información:
+
+Simular la Visión de las Cartas del Oponente: Intentar jugar tus manos como si pudieras ver las cartas del oponente, basándote en las inferencias de sus acciones y patrones.
+Responder a Apuestas: Tomar decisiones sobre aceptar, rechazar, o subir apuestas basándote en la evaluación de la probabilidad de tener una mano mejor que la del oponente.
+Maximización de Ganancias y Minimización de Pérdidas:
+
+Aprovechar Oportunidades: Si tus inferencias sugieren que tienes una mano superior, realizar acciones que maximicen tus ganancias (cantar truco, re truco, etc.).
+Minimizar Pérdidas: Si las acciones del oponente sugieren que tiene una mano más fuerte, evitar apuestas altas o retirarse para minimizar pérdidas.
 
 * **Pozo del juego (Game's Equity)**:
 El pozo del juego es la cantidad de puntos en juego durante la partida. (Ejemplo: Si se canta truco y re truco serán 3).
