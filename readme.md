@@ -504,7 +504,7 @@ acciones_inversas = {v: k for k, vs in acciones.items() for v in (vs if isinstan
 
 | Jugada         | Descripción      | Estado      | Acciones
 | ------------- |:-------------:|:-------------:|:-------------:|
-| Ir a la pesca         | Se tiene tanto o truco medio o alto, no se canta y se espera a que el contrincante cante para doblar la apuesta o aceptar.    | ```python  numero_ronda = 1 turno_actual="Yo"  es_mano=True nivel_truco=0 nivel_envido=0 mano_jugador.ranking > n ``` | check
+| Ir a la pesca         | Se tiene tanto o truco medio o alto, no se canta y se espera a que el contrincante cante para doblar la apuesta o aceptar.    | ```numero_ronda = 1 turno_actual="Yo"  es_mano=True nivel_truco=0 nivel_envido=0 mano_jugador.ranking > n ``` | check
 | Envido de Cobertura         | Se tiene buen tanto pero malas cartas para el  truco, el oponente canta truco en la primera mano, y se dice "el envido esta primero" para postergar el truco y obtener puntos del tanto antes de retirarse.     |
 | Mentira del tanto         | No se tienen buen tanto, se canta o se acepta y al momento de decir los puntos se miente por un número más alto, esperando a que se termine la partida y el rival haya olvidado pedir que se muestren los tantos.      |
 | Trampa del truco        | Se tiene muy buenas cartas de envio y cartas medias/buenas de truco, en la primera mano cantamos truco esperando que nuestro oponente nos diga "el envido esta primero" de manera tal que podamos doblar la apuesta.      |
@@ -682,6 +682,7 @@ class EstadoTruco:
     def __init__(self, mano_jugador, mano_oponente, cartas_jugadas, puntos_jugador, puntos_oponente, numero_ronda, turno_actual, nivel_truco, nivel_envido, es_mano):
         self.mano_jugador = mano_jugador  # Cartas en la mano del jugador
         self.mano_oponente = mano_oponente  # Cartas en la mano del oponente (normalmente desconocido, pero puede ser conocido en simulación)
+        self.perfil_oponente = perfil_oponente # Modelado del estilo de juego de nuestro oponente
         self.cartas_jugadas = cartas_jugadas  # Cartas jugadas en la mesa
         self.puntos_jugador = puntos_jugador  # Puntos del jugador
         self.puntos_oponente = puntos_oponente  # Puntos del oponente
