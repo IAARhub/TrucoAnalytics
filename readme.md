@@ -504,7 +504,7 @@ acciones_inversas = {v: k for k, vs in acciones.items() for v in (vs if isinstan
 
 | Jugada         | Descripción      | Estado      | Acciones
 | ------------- |:-------------:|:-------------:|:-------------:|
-| Ir a la pesca         | Se tiene tanto o truco medio o alto, no se canta y se espera a que el contrincante cante para doblar la apuesta o aceptar.    | mano_jugador.ranking = "Medio" OR mano_jugador.ranking = "Alto" && numero_ronda = 1 && turno_actual = "Yo" | check
+| Ir a la pesca         | Se tiene tanto o truco medio o alto, no se canta y se espera a que el contrincante cante para doblar la apuesta o aceptar.    | ```python  numero_ronda = 1 turno_actual="Yo"  es_mano=True nivel_truco=0 nivel_envido=0 mano_jugador.ranking > n ``` | check
 | Envido de Cobertura         | Se tiene buen tanto pero malas cartas para el  truco, el oponente canta truco en la primera mano, y se dice "el envido esta primero" para postergar el truco y obtener puntos del tanto antes de retirarse.     |
 | Mentira del tanto         | No se tienen buen tanto, se canta o se acepta y al momento de decir los puntos se miente por un número más alto, esperando a que se termine la partida y el rival haya olvidado pedir que se muestren los tantos.      |
 | Trampa del truco        | Se tiene muy buenas cartas de envio y cartas medias/buenas de truco, en la primera mano cantamos truco esperando que nuestro oponente nos diga "el envido esta primero" de manera tal que podamos doblar la apuesta.      |
